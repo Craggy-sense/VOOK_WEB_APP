@@ -48,4 +48,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // Observe elements with animation classes
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
     animatedElements.forEach(el => observer.observe(el));
+
+    // Membership Form Submission
+    const membershipForm = document.getElementById('membership-form');
+    const formMessage = document.getElementById('form-message');
+
+    if (membershipForm) {
+        membershipForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const interest = document.getElementById('interest').value;
+
+            // Clear previous messages
+            formMessage.className = 'form-message';
+            formMessage.style.display = 'none';
+
+            if (!fullName || !email || !phone || !interest) {
+                formMessage.textContent = 'Please fill out all required fields.';
+                formMessage.classList.add('error');
+                return;
+            }
+
+            // Simulate API submission
+            const submitButton = membershipForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                
+                // Show success state
+                formMessage.textContent = `Thank you, ${fullName}! Your application has been submitted successfully. We will contact you soon.`;
+                formMessage.classList.add('success');
+                
+                // Reset form
+                membershipForm.reset();
+            }, 1500);
+        });
+    }
 });
