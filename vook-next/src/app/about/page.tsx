@@ -163,6 +163,72 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Partners & Collaborations Section */}
+      <section className="section-padding">
+        <div className="container">
+          <ScrollReveal>
+            <div className="section-title text-center">
+              <span className="subtitle">Our Network</span>
+              <h2>Partners & Collaborations</h2>
+              <div className="title-underline center"></div>
+              <p className="text-muted mt-4" style={{ maxWidth: "700px", margin: "0 auto" }}>
+                Vook Voice International partners with a wide range of experts, organizations, and institutions to create, package, and share impactful knowledge across different sectors.
+              </p>
+            </div>
+          </ScrollReveal>
+          
+          <div className="grid-3 mt-5">
+            <ScrollReveal delay={100}>
+              <div className="premium-executive-card" style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem" }}>
+                <i className="fas fa-building" style={{ fontSize: "2rem", color: "var(--primary-green)" }}></i>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "0" }}>Corporate Partnerships</h4>
+                <p className="text-muted" style={{ fontSize: "0.95rem" }}>Working with organizations to deliver leadership development, professional training, and knowledge-sharing initiatives.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={200}>
+              <div className="premium-executive-card" style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem" }}>
+                <i className="fas fa-church" style={{ fontSize: "2rem", color: "var(--primary-green)" }}></i>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "0" }}>Faith-Based Institutions</h4>
+                <p className="text-muted" style={{ fontSize: "0.95rem" }}>Partnering to promote spiritual growth, leadership development, and practical life skills within faith communities.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="premium-executive-card" style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem" }}>
+                <i className="fas fa-university" style={{ fontSize: "2rem", color: "var(--primary-green)" }}></i>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "0" }}>Academic Institutions</h4>
+                <p className="text-muted" style={{ fontSize: "0.95rem" }}>Partnering with universities and colleges for research, workshops, seminars, and capacity-building programs.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={400}>
+              <div className="premium-executive-card" style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem" }}>
+                <i className="fas fa-user-tie" style={{ fontSize: "2rem", color: "var(--primary-green)" }}></i>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "0" }}>Industry Experts</h4>
+                <p className="text-muted" style={{ fontSize: "0.95rem" }}>Engaging professionals and practitioners to share insights through webinars, talks, masterclasses, and conferences.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={500}>
+              <div className="premium-executive-card" style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem" }}>
+                <i className="fas fa-book-open" style={{ fontSize: "2rem", color: "var(--primary-green)" }}></i>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "0" }}>Publishers & Media</h4>
+                <p className="text-muted" style={{ fontSize: "0.95rem" }}>Collaborating to produce and distribute books, vooks (video books), podcasts, magazines, and other multimedia content.</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={600}>
+              <div className="premium-executive-card" style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem" }}>
+                <i className="fas fa-hands-helping" style={{ fontSize: "2rem", color: "var(--primary-green)" }}></i>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "0" }}>Community Organizations</h4>
+                <p className="text-muted" style={{ fontSize: "0.95rem" }}>Supporting community development through educational resources, skills training, and empowerment programs.</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
