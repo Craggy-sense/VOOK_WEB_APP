@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
