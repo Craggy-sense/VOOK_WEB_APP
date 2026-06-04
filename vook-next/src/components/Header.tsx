@@ -102,6 +102,16 @@ export default function Header() {
                 </Link>
               </li>
             </ul>
+
+            {/* Mobile Only Contact Block */}
+            <div className="mobile-only-contact">
+              <a href="tel:+254700000000" className="btn-corporate-primary" style={{ display: 'block', textAlign: 'center', marginBottom: '1rem' }}>
+                <i className="fas fa-phone-alt" style={{ marginRight: '8px' }}></i> Call Us
+              </a>
+              <a href="mailto:info@vookinternational.org" style={{ display: 'block', textAlign: 'center', color: 'var(--text-gray)' }}>
+                <i className="fas fa-envelope" style={{ marginRight: '8px' }}></i> info@vookinternational.org
+              </a>
+            </div>
           </nav>
 
           <button className="header-phone-btn pulse-icon" onClick={() => document.dispatchEvent(new CustomEvent('openModal', {detail: 'Contact'}))}>
