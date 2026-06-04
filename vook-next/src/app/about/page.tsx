@@ -56,6 +56,36 @@ export default function About() {
               </ScrollReveal>
             </div>
           </div>
+
+          <div className="row align-items-center" style={{ marginTop: "6rem" }}>
+            <div className="col-7" style={{ paddingRight: "2rem" }}>
+              <ScrollReveal delay={200}>
+                <div className="section-title">
+                  <span className="subtitle">Leadership Scholar</span>
+                  <h2>Moses Osagiede</h2>
+                  <div className="title-underline"></div>
+                </div>
+                <p className="lead-text mt-4">Associate Trainer</p>
+                <p className="text-muted mt-3 mb-4">
+                  Moses Osagiede is an Associate Trainer at Vook Voice International and a leadership scholar, educator, and transformational development practitioner with extensive experience in mentoring, coaching, teaching, and organizational leadership across diverse sectors of society. With a strong background in planning and transformational leadership, he is passionate about developing individuals and institutions for sustainable growth and positive impact.
+                </p>
+                <p className="text-muted mb-4">
+                  In addition to his training role at Vook Voice International, Moses Osagiede serves as a faculty member in Leadership and Organizational Culture at International Leadership University, where he contributes to leadership development and capacity building through teaching, research, and mentorship. His work is driven by a commitment to empowering people, strengthening organizations, and fostering values-based leadership in Africa and beyond.
+                </p>
+                <p className="text-muted mb-4">
+                  He is a graduate of Obafemi Awolowo University, Nigeria, and the International Graduate School of Leadership. Currently, he is pursuing doctoral research focused on leadership adaptability, organizational culture, and government policies affecting younger employees in Kenya’s banking sector.
+                </p>
+              </ScrollReveal>
+            </div>
+            <div className="col-5" style={{ position: "relative" }}>
+              <ScrollReveal>
+                <div className="premium-image-container">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2069&auto=format&fit=crop" alt="Moses Osagiede" style={{ width: "100%", height: "500px", objectFit: "cover" }} />
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
         </div>
       </section>
 
