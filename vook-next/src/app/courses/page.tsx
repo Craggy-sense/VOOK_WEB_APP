@@ -37,6 +37,16 @@ export default function Courses() {
       title: "Strategic Project Management",
       desc: "Execute complex initiatives on time, on budget, and with precision.",
       icon: "fas fa-project-diagram"
+    },
+    {
+      title: "Board Governance and Leadership",
+      desc: "Level 1: Foundations Of Effective Governance. Level 2: Strategic Leadership And Board Effectiveness. Level 3: Advanced Corporate Governance And Policy Oversight.",
+      icon: "fas fa-gavel"
+    },
+    {
+      title: "Business Entrepreneurship",
+      desc: "Unlocking innovation strategies, startup business planning, financial literacy, and sustainable enterprise management.",
+      icon: "fas fa-lightbulb"
     }
   ];
 
@@ -75,6 +85,28 @@ export default function Courses() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Target Beneficiaries Banner */}
+      <section className="section-padding">
+        <div className="container">
+          <ScrollReveal>
+            <div style={{
+              background: "var(--primary-green)",
+              color: "white",
+              padding: "4rem 2rem",
+              borderRadius: "12px",
+              textAlign: "center",
+              boxShadow: "0 15px 35px rgba(26, 150, 43, 0.25)",
+              marginTop: "1rem"
+            }}>
+              <h2 style={{ color: "white", marginBottom: "1rem", fontSize: "2rem" }}>Target Beneficiaries</h2>
+              <p style={{ fontSize: "1.2rem", fontWeight: 500, opacity: 0.95, margin: 0 }}>
+                Individuals, Corporates, Churches, Academic Institutions & Communities.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>
