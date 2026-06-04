@@ -8,13 +8,7 @@ export default function Footer() {
       <div className="footer-top">
         <div className="container row">
           <div className="col-5">
-            <Image 
-              src="/Vook logo.png" 
-              alt="Vook Voice International Logo" 
-              width={200} 
-              height={60} 
-              className="footer-logo mb-4" 
-            />
+
             <p className="mb-4">
               Availing Knowledge to the People. A registered NGO in Kenya dedicated to empowerment, leadership training, and spiritual growth.
             </p>
