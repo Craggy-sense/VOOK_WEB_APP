@@ -90,6 +90,46 @@ export default function About() {
                 </div>
               </div>
             </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="premium-executive-card">
+                <div className="premium-avatar">JM</div>
+                <div>
+                  <h4 style={{ fontSize: "1.2rem", marginBottom: "0.2rem" }}>Dr. Jacqualine Mutua</h4>
+                  <span className="text-muted" style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--primary-green)" }}>Kenya</span>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={400}>
+              <div className="premium-executive-card">
+                <div className="premium-avatar">JK</div>
+                <div>
+                  <h4 style={{ fontSize: "1.2rem", marginBottom: "0.2rem" }}>Jini Kingsley</h4>
+                  <span className="text-muted" style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--primary-green)" }}>PhD Candidate - Ghana</span>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={500}>
+              <div className="premium-executive-card">
+                <div className="premium-avatar">MT</div>
+                <div>
+                  <h4 style={{ fontSize: "1.2rem", marginBottom: "0.2rem" }}>Mubarak Thiep</h4>
+                  <span className="text-muted" style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--primary-green)" }}>PhD Student - South Sudan</span>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={600}>
+              <div className="premium-executive-card">
+                <div className="premium-avatar">RW</div>
+                <div>
+                  <h4 style={{ fontSize: "1.2rem", marginBottom: "0.2rem" }}>Dr. Ruth Waweru</h4>
+                  <span className="text-muted" style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--primary-green)" }}>Kenya</span>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
