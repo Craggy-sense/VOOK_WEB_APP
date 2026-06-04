@@ -81,7 +81,7 @@ export default function About() {
               <ScrollReveal>
                 <div className="premium-image-container">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2069&auto=format&fit=crop" alt="Moses Osagiede" style={{ width: "100%", height: "500px", objectFit: "cover" }} />
+                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2000&auto=format&fit=crop" alt="Moses Osagiede" style={{ width: "100%", height: "500px", objectFit: "cover" }} />
                 </div>
               </ScrollReveal>
             </div>
