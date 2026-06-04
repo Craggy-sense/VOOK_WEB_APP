@@ -84,6 +84,9 @@ export default function Header() {
                   <li className="header-dropdown-item">
                     <Link href="/about#team" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Core Team</Link>
                   </li>
+                  <li className="header-dropdown-item">
+                    <Link href="/about#partners" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Our Partners</Link>
+                  </li>
                 </ul>
               </li>
 

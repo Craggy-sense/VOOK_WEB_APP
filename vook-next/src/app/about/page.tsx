@@ -165,7 +165,7 @@ export default function About() {
       </section>
 
       {/* Partners & Collaborations Section */}
-      <section className="section-padding">
+      <section id="partners" className="section-padding">
         <div className="container">
           <ScrollReveal>
             <div className="section-title text-center">
