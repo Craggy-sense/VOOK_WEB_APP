@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <section className="slider-container" aria-label="Hero Slider">
         <div className="slider">
-          <div className={`slide slide-1 ${activeSlide === 0 ? "active-slide" : ""}`} style={{backgroundImage: "url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop')"}}>
+          <div className={`slide slide-1 ${activeSlide === 0 ? "active-slide" : ""}`} style={{backgroundImage: "url('https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop')"}}>
             <div className="slide-overlay"></div>
             <div className="container" style={{position: 'relative', height: '100%', display: 'flex', alignItems: 'center'}}>
               <div className="slide-content">
@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className={`slide slide-2 ${activeSlide === 1 ? "active-slide" : ""}`} style={{backgroundImage: "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop')"}}>
+          <div className={`slide slide-2 ${activeSlide === 1 ? "active-slide" : ""}`} style={{backgroundImage: "url('https://images.unsplash.com/photo-1573167507017-6b63a62883f3?q=80&w=2069&auto=format&fit=crop')"}}>
             <div className="slide-overlay"></div>
             <div className="container" style={{position: 'relative', height: '100%', display: 'flex', alignItems: 'center'}}>
               <div className="slide-content">
