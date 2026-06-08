@@ -2,8 +2,8 @@ import { defineConfig } from "tinacms";
 // Trigger indexing
 
 
-// Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+// Hardcode branch to 'main' because Netlify sometimes sets process.env.HEAD to a commit hash.
+const branch = "main";
 
 export default defineConfig({
   branch,
