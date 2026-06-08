@@ -1,4 +1,7 @@
 import React from "react";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 
@@ -7,6 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
+  const filePath = path.join(process.cwd(), "src/content/pages/about.md");
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const { data } = matter(fileContent);
+
   return (
     <>
       {/* Premium Page Header */}
@@ -29,7 +36,7 @@ export default function About() {
               <ScrollReveal>
                 <div className="premium-image-container">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2069&auto=format&fit=crop" alt="Pastor Susan Kibii" style={{ width: "100%", height: "500px", objectFit: "cover" }} />
+                  <img src={data.founder_image} alt="Pastor Susan Kibii" style={{ width: "100%", height: "500px", objectFit: "cover" }} />
                 </div>
               </ScrollReveal>
             </div>
@@ -42,17 +49,11 @@ export default function About() {
                 </div>
                 <p className="lead-text mt-4">Founder & Executive Director</p>
                 <p className="text-muted mt-3 mb-4">
-                  Pastor Susan Kibii is a visionary leader dedicated to spiritual and professional empowerment. 
-                  She established Vook Voice International in 2017 to bridge the gap in emotional intelligence 
-                  and corporate leadership training.
+                  {data.founder_bio}
                 </p>
                 <blockquote style={{ borderLeft: "4px solid var(--primary-green)", paddingLeft: "1.5rem", fontStyle: "italic", margin: "2rem 0", color: "var(--navy-dark)", fontSize: "1.1rem" }}>
-                  "Leadership is not just about strategic management; it's about emotional intelligence and understanding your core assignment in life."
+                  {data.founder_quote}
                 </blockquote>
-                <p className="text-muted mb-4">
-                  She is also the acclaimed author of the book <strong>"Understanding your Assignment before Marriage"</strong>, 
-                  which has transformed countless lives through its insightful guidance.
-                </p>
               </ScrollReveal>
             </div>
           </div>
@@ -67,13 +68,7 @@ export default function About() {
                 </div>
                 <p className="lead-text mt-4">Associate Trainer</p>
                 <p className="text-muted mt-3 mb-4">
-                  Moses Osagiede is an Associate Trainer at Vook Voice International and a leadership scholar, educator, and transformational development practitioner with extensive experience in mentoring, coaching, teaching, and organizational leadership across diverse sectors of society. With a strong background in planning and transformational leadership, he is passionate about developing individuals and institutions for sustainable growth and positive impact.
-                </p>
-                <p className="text-muted mb-4">
-                  In addition to his training role at Vook Voice International, Moses Osagiede serves as a faculty member in Leadership and Organizational Culture at International Leadership University, where he contributes to leadership development and capacity building through teaching, research, and mentorship. His work is driven by a commitment to empowering people, strengthening organizations, and fostering values-based leadership in Africa and beyond.
-                </p>
-                <p className="text-muted mb-4">
-                  He is a graduate of Obafemi Awolowo University, Nigeria, and the International Graduate School of Leadership. Currently, he is pursuing doctoral research focused on leadership adaptability, organizational culture, and government policies affecting younger employees in Kenya’s banking sector.
+                  {data.moses_bio}
                 </p>
               </ScrollReveal>
             </div>
@@ -81,7 +76,7 @@ export default function About() {
               <ScrollReveal>
                 <div className="premium-image-container">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/moses-placeholder.png" alt="Moses Osagiede" style={{ width: "100%", height: "500px", objectFit: "cover" }} />
+                  <img src={data.moses_image} alt="Moses Osagiede" style={{ width: "100%", height: "500px", objectFit: "cover" }} />
                 </div>
               </ScrollReveal>
             </div>

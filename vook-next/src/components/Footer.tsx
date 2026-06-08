@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Footer() {
+export default function Footer({ settings }: { settings: any }) {
   return (
     <footer className="corporate-footer">
       <div className="footer-top">
@@ -51,15 +51,15 @@ export default function Footer() {
               <ul>
                 <li>
                   <i className="fas fa-map-marker-alt f-icon"></i>
-                  <span>Nairobi, Kenya</span>
+                  <span>{settings.address}</span>
                 </li>
                 <li>
                   <i className="fas fa-phone-alt f-icon"></i>
-                  <a href="tel:+254700000000">+254 700 000 000</a>
+                  <a href={`tel:${settings.phone.replace(/\s+/g, '')}`}>{settings.phone}</a>
                 </li>
                 <li>
                   <i className="fas fa-envelope f-icon"></i>
-                  <a href="mailto:info@vookinternational.org">info@vookinternational.org</a>
+                  <a href={`mailto:${settings.email}`}>{settings.email}</a>
                 </li>
               </ul>
             </div>

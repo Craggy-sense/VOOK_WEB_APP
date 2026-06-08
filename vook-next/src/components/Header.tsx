@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Header() {
+export default function Header({ settings }: { settings: any }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -33,11 +33,11 @@ export default function Header() {
       <div className="header-top-bar">
         <div className="container header-top-container">
           <div className="header-top-left">
-            <a href="mailto:info@vookinternational.org" className="header-top-item">
-              <i className="fas fa-envelope icon"></i> info@vookinternational.org
+            <a href={`mailto:${settings.email}`} className="header-top-item">
+              <i className="fas fa-envelope icon"></i> {settings.email}
             </a>
             <span className="header-top-item">
-              <i className="fas fa-map-marker-alt icon"></i> Nairobi, Kenya
+              <i className="fas fa-map-marker-alt icon"></i> {settings.address}
             </span>
           </div>
           <div className="header-top-right">
@@ -105,11 +105,11 @@ export default function Header() {
 
             {/* Mobile Only Contact Block */}
             <div className="mobile-only-contact">
-              <a href="tel:+254700000000" className="btn-corporate-primary" style={{ display: 'block', textAlign: 'center', marginBottom: '1rem' }}>
+              <a href={`tel:${settings.phone.replace(/\s+/g, '')}`} className="btn-corporate-primary" style={{ display: 'block', textAlign: 'center', marginBottom: '1rem' }}>
                 <i className="fas fa-phone-alt" style={{ marginRight: '8px' }}></i> Call Us
               </a>
-              <a href="mailto:info@vookinternational.org" style={{ display: 'block', textAlign: 'center', color: 'var(--text-gray)' }}>
-                <i className="fas fa-envelope" style={{ marginRight: '8px' }}></i> info@vookinternational.org
+              <a href={`mailto:${settings.email}`} style={{ display: 'block', textAlign: 'center', color: 'var(--text-gray)' }}>
+                <i className="fas fa-envelope" style={{ marginRight: '8px' }}></i> {settings.email}
               </a>
             </div>
           </nav>
