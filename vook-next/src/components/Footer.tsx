@@ -17,7 +17,7 @@ export default function Footer({ settings }: { settings: any }) {
               boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
             }}>
               <Image 
-                src="/Vook logo.png" 
+                src="/Vook logo new.jpg" 
                 alt="Vook Voice International Logo" 
                 width={180} 
                 height={54} 

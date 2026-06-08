@@ -62,7 +62,7 @@ export default function Header({ settings }: { settings: any }) {
       <div className="header-main-nav">
         <div className="container header-nav-container">
           <Link href="/" className="header-logo">
-            <Image src="/Vook logo.png" alt="Vook Voice International" width={150} height={50} priority style={{ height: "50px", width: "auto" }} />
+            <Image src="/Vook logo new.jpg" alt="Vook Voice International" width={150} height={50} priority style={{ height: "50px", width: "auto" }} />
           </Link>
 
           <nav className={`nav-wrapper ${isMobileMenuOpen ? "active" : ""}`}>
