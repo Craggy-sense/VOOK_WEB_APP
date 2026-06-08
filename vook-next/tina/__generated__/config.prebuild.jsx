@@ -1,7 +1,5 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
-import dotenv from "dotenv";
-dotenv.config({ path: ".env.local" });
 var branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 var config_default = defineConfig({
   branch,
