@@ -1,0 +1,43 @@
+fragment PagesParts on Pages {
+  __typename
+  slide1_image
+  slide1_title
+  slide1_subtitle
+  slide1_text
+  slide2_image
+  slide2_title
+  slide2_subtitle
+  slide2_text
+  vision
+  mission
+  founder_image
+  founder_bio
+  founder_quote
+  moses_image
+  moses_bio
+}
+
+fragment SettingsParts on Settings {
+  __typename
+  primary_color
+  email
+  phone
+  address
+}
+
+fragment CoursesParts on Courses {
+  __typename
+  title
+  icon
+  desc
+}
+
+fragment BlogsParts on Blogs {
+  __typename
+  title
+  date
+  author
+  image
+  description
+  body
+}
