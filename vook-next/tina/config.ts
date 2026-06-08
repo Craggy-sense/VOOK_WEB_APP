@@ -7,7 +7,7 @@ const branch = "main";
 
 export default defineConfig({
   branch,
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "3dfd4b9c-95fc-474e-8b27-a5bb0bc3b7c3", // Hardcoded fallback for TinaCloud parser
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
   token: process.env.TINA_TOKEN, // Keep token secret
 
   build: {
