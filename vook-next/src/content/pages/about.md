@@ -9,9 +9,10 @@ moses_title: Associate Trainer
 moses_image: /uploads/moses-placeholder.png
 moses_bio: 'Moses Osagiede is an Associate Trainer at Vook Voice International and a leadership scholar, educator, and transformational development practitioner with extensive experience in mentoring, coaching, teaching, and organizational leadership across diverse sectors of society. With a strong background in planning and transformational leadership, he is passionate about developing individuals and institutions for sustainable growth and positive impact.'
 core_team:
-  - name: Pastor Susan Kibii
+  - name: Susan Kibii
     title: Founder & Executive Director
     initials: SK
+    country: Kenya
   - name: Moses Osagiede
     title: Associate Trainer & Leadership Scholar
     initials: MO
