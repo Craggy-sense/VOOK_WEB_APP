@@ -8,13 +8,55 @@ fragment PagesParts on Pages {
   slide2_title
   slide2_subtitle
   slide2_text
+  welcome_title
   vision
   mission
+  feature_boxes {
+    __typename
+    title
+    icon
+    desc
+  }
+  founder_name
+  founder_title
   founder_image
   founder_bio
   founder_quote
+  moses_name
+  moses_title
   moses_image
   moses_bio
+  core_team {
+    __typename
+    name
+    title
+    initials
+    country
+  }
+  partnerships {
+    __typename
+    title
+    icon
+    desc
+  }
+  programs_hero_title
+  departments {
+    __typename
+    id
+    title
+    icon
+    short
+    details
+  }
+  strategic_programs {
+    __typename
+    title
+    tag
+    desc
+  }
+  courses_hero_title
+  beneficiaries_title
+  beneficiaries_text
 }
 
 fragment SettingsParts on Settings {

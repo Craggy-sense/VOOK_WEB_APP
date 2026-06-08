@@ -9,4 +9,18 @@ slide2_subtitle: "Availing Knowledge to the People"
 slide2_text: "Join our comprehensive programs designed for modern professionals, focusing on strategic management and communication."
 vision: "To be the premier knowledge hub for transformational leadership in Africa."
 mission: "Equipping individuals with the emotional and strategic tools to succeed."
+welcome_title: "Welcome to Vook Voice"
+feature_boxes:
+  - title: "Our Vision"
+    icon: "fas fa-bullseye"
+    desc: "To be the premier knowledge hub for transformational leadership in Africa."
+  - title: "Our Mission"
+    icon: "fas fa-hands-helping"
+    desc: "Equipping individuals with the emotional and strategic tools to succeed."
+  - title: "The Book"
+    icon: "fas fa-book-open"
+    desc: '"Understanding your Assignment before Marriage" by Pastor Susan Kibii.'
+  - title: "Certification"
+    icon: "fas fa-certificate"
+    desc: "Rigorous, internationally recognized training modules."
 ---

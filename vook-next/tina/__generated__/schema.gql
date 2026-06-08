@@ -96,6 +96,39 @@ type Collection {
 
 union DocumentNode = Pages | Settings | Courses | Blogs | Folder
 
+type PagesFeature_boxes {
+  title: String
+  icon: String
+  desc: String
+}
+
+type PagesCore_team {
+  name: String
+  title: String
+  initials: String
+  country: String
+}
+
+type PagesPartnerships {
+  title: String
+  icon: String
+  desc: String
+}
+
+type PagesDepartments {
+  id: String
+  title: String
+  icon: String
+  short: String
+  details: String
+}
+
+type PagesStrategic_programs {
+  title: String
+  tag: String
+  desc: String
+}
+
 type Pages implements Node & Document {
   slide1_image: String
   slide1_title: String
@@ -105,13 +138,27 @@ type Pages implements Node & Document {
   slide2_title: String
   slide2_subtitle: String
   slide2_text: String
+  welcome_title: String
   vision: String
   mission: String
+  feature_boxes: [PagesFeature_boxes]
+  founder_name: String
+  founder_title: String
   founder_image: String
   founder_bio: String
   founder_quote: String
+  moses_name: String
+  moses_title: String
   moses_image: String
   moses_bio: String
+  core_team: [PagesCore_team]
+  partnerships: [PagesPartnerships]
+  programs_hero_title: String
+  departments: [PagesDepartments]
+  strategic_programs: [PagesStrategic_programs]
+  courses_hero_title: String
+  beneficiaries_title: String
+  beneficiaries_text: String
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -131,6 +178,39 @@ input StringFilter {
   in: [String]
 }
 
+input PagesFeature_boxesFilter {
+  title: StringFilter
+  icon: StringFilter
+  desc: StringFilter
+}
+
+input PagesCore_teamFilter {
+  name: StringFilter
+  title: StringFilter
+  initials: StringFilter
+  country: StringFilter
+}
+
+input PagesPartnershipsFilter {
+  title: StringFilter
+  icon: StringFilter
+  desc: StringFilter
+}
+
+input PagesDepartmentsFilter {
+  id: StringFilter
+  title: StringFilter
+  icon: StringFilter
+  short: StringFilter
+  details: StringFilter
+}
+
+input PagesStrategic_programsFilter {
+  title: StringFilter
+  tag: StringFilter
+  desc: StringFilter
+}
+
 input PagesFilter {
   slide1_image: ImageFilter
   slide1_title: StringFilter
@@ -140,13 +220,27 @@ input PagesFilter {
   slide2_title: StringFilter
   slide2_subtitle: StringFilter
   slide2_text: StringFilter
+  welcome_title: StringFilter
   vision: StringFilter
   mission: StringFilter
+  feature_boxes: PagesFeature_boxesFilter
+  founder_name: StringFilter
+  founder_title: StringFilter
   founder_image: ImageFilter
   founder_bio: StringFilter
   founder_quote: StringFilter
+  moses_name: StringFilter
+  moses_title: StringFilter
   moses_image: ImageFilter
   moses_bio: StringFilter
+  core_team: PagesCore_teamFilter
+  partnerships: PagesPartnershipsFilter
+  programs_hero_title: StringFilter
+  departments: PagesDepartmentsFilter
+  strategic_programs: PagesStrategic_programsFilter
+  courses_hero_title: StringFilter
+  beneficiaries_title: StringFilter
+  beneficiaries_text: StringFilter
 }
 
 type PagesConnectionEdges {
@@ -291,6 +385,39 @@ input DocumentMutation {
   blogs: BlogsMutation
 }
 
+input PagesFeature_boxesMutation {
+  title: String
+  icon: String
+  desc: String
+}
+
+input PagesCore_teamMutation {
+  name: String
+  title: String
+  initials: String
+  country: String
+}
+
+input PagesPartnershipsMutation {
+  title: String
+  icon: String
+  desc: String
+}
+
+input PagesDepartmentsMutation {
+  id: String
+  title: String
+  icon: String
+  short: String
+  details: String
+}
+
+input PagesStrategic_programsMutation {
+  title: String
+  tag: String
+  desc: String
+}
+
 input PagesMutation {
   slide1_image: String
   slide1_title: String
@@ -300,13 +427,27 @@ input PagesMutation {
   slide2_title: String
   slide2_subtitle: String
   slide2_text: String
+  welcome_title: String
   vision: String
   mission: String
+  feature_boxes: [PagesFeature_boxesMutation]
+  founder_name: String
+  founder_title: String
   founder_image: String
   founder_bio: String
   founder_quote: String
+  moses_name: String
+  moses_title: String
   moses_image: String
   moses_bio: String
+  core_team: [PagesCore_teamMutation]
+  partnerships: [PagesPartnershipsMutation]
+  programs_hero_title: String
+  departments: [PagesDepartmentsMutation]
+  strategic_programs: [PagesStrategic_programsMutation]
+  courses_hero_title: String
+  beneficiaries_title: String
+  beneficiaries_text: String
 }
 
 input SettingsMutation {

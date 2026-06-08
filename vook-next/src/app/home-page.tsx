@@ -25,7 +25,7 @@ export default function HomePage(props: any) {
               <ScrollReveal>
                 <div className="section-title">
                   <span className="subtitle" data-tina-field={page.vision ? tinaField(page, "vision") : undefined}>Welcome to Vook Voice</span>
-                  <h2>A Vision for Empowerment</h2>
+                  <h2 data-tina-field={tinaField(page, "welcome_title")}>{page.welcome_title || "A Vision for Empowerment"}</h2>
                   <div className="title-underline"></div>
                 </div>
                 <p className="lead-text mt-4">We are committed to delivering high-impact training and knowledge transfer.</p>
@@ -37,42 +37,17 @@ export default function HomePage(props: any) {
             
             <div className="col-7">
               <div className="grid-2" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem'}}>
-                <ScrollReveal delay={100}>
-                  <div className="feature-box">
-                    <i className="fas fa-bullseye feature-icon"></i>
-                    <div className="feature-text">
-                      <h4>Our Vision</h4>
-                      <p>{page.vision}</p>
+                {page.feature_boxes && page.feature_boxes.map((feature: any, index: number) => (
+                  <ScrollReveal delay={(index + 1) * 100} key={index}>
+                    <div className="feature-box" data-tina-field={tinaField(feature, "title")}>
+                      <i className={`${feature.icon || "fas fa-star"} feature-icon`} data-tina-field={tinaField(feature, "icon")}></i>
+                      <div className="feature-text">
+                        <h4 data-tina-field={tinaField(feature, "title")}>{feature.title}</h4>
+                        <p data-tina-field={tinaField(feature, "desc")}>{feature.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={200}>
-                  <div className="feature-box">
-                    <i className="fas fa-hands-helping feature-icon"></i>
-                    <div className="feature-text">
-                      <h4>Our Mission</h4>
-                      <p>{page.mission}</p>
-                    </div>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={300}>
-                  <div className="feature-box">
-                    <i className="fas fa-book-open feature-icon"></i>
-                    <div className="feature-text">
-                      <h4>The Book</h4>
-                      <p>"Understanding your Assignment before Marriage" by Pastor Susan Kibii.</p>
-                    </div>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={400}>
-                  <div className="feature-box">
-                    <i className="fas fa-certificate feature-icon"></i>
-                    <div className="feature-text">
-                      <h4>Certification</h4>
-                      <p>Rigorous, internationally recognized training modules.</p>
-                    </div>
-                  </div>
-                </ScrollReveal>
+                  </ScrollReveal>
+                ))}
               </div>
             </div>
           </div>
