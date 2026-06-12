@@ -1,7 +1,7 @@
 ---
 founder_name: Susan Kibii
 founder_title: Founder & Executive Director
-founder_image: /uploads/hhh-removebg-preview.png
+founder_image: /uploads/Susan-Kibii.jpeg
 founder_bio: |2-
    Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation. She is passionate about empowering individuals and organizations through training, mentorship, and knowledge-sharing initiatives across corporate, academic, church, and community settings.
 
