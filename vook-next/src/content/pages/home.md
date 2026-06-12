@@ -17,11 +17,5 @@ feature_boxes:
   - title: Our Mission
     icon: fas fa-hands-helping
     desc: Equipping individuals with the emotional and strategic tools to succeed.
-  - title: The Book
-    icon: fas fa-book-open
-    desc: '"Understanding your Assignment before Marriage" by Pastor Susan Kibii.'
-  - title: Certification
-    icon: fas fa-certificate
-    desc: 'Rigorous, internationally recognized training modules.'
 ---
 
