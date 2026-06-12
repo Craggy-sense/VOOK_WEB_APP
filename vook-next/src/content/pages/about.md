@@ -1,7 +1,7 @@
 ---
 founder_name: Susan Kibii
 founder_title: Founder & Executive Director
-founder_image: /uploads/Susan-Kibii.jpeg
+founder_image: /uploads/hhh-removebg-preview.png
 founder_bio: 'Susan Kibii is a visionary leader dedicated to spiritual and professional empowerment. She established Vook Voice International in 2017 to bridge the gap in emotional intelligence and corporate leadership training. She is also the acclaimed author of the book "Understanding your Assignment before Marriage", which has transformed countless lives through its insightful guidance.'
 founder_quote: '"Leadership is not just about strategic management; it''s about emotional intelligence and understanding your core assignment in life."'
 moses_name: Moses Osagiede
