@@ -11,8 +11,8 @@ founder_bio: |2-
 founder_quote: '"Leadership is not just about strategic management; it''s about emotional intelligence and understanding your core assignment in life."'
 moses_name: Moses Osagiede
 moses_title: Associate Trainer
-moses_image: /uploads/moses-placeholder.png
-moses_bio: 'Moses Osagiede is an Associate Trainer at Vook Voice International and a leadership scholar, educator, and transformational development practitioner with extensive experience in mentoring, coaching, teaching, and organizational leadership across diverse sectors of society. With a strong background in planning and transformational leadership, he is passionate about developing individuals and institutions for sustainable growth and positive impact.'
+moses_image: /uploads/Moses-Osagiende.jpeg
+moses_bio: ' Moses Osagiede is a graduate of Obafemi Awolowo University, Ife, Nigeria, and the International Graduate School of Leadership in Manila, Philippines. He serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya. He also leads the institution’s Leader-Transformation Department, which focuses on mentoring, coaching, and delivering value-based courses that help students integrate values with academic learning and translate them into productivity across various sectors of society. With a background in planning and transformational leadership, he is currently pursuing doctoral research on leadership adaptability, organizational culture, and government policies affecting younger employees in Kenya’s banking sector.'
 core_team:
   - name: Susan Kibii
     title: Founder & Executive Director
