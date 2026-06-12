@@ -8,7 +8,7 @@ founder_bio: |2-
   Susan holds a Master of Arts in Leadership Studies (Organizational Development), a Bachelor of Arts in Journalism, and a Bachelor of Arts in Counselling. She also holds Diplomas in Theology, Professional Journalism, and Community Development, among other professional qualifications, and is currently pursuing a PhD in Leadership Studies with a specialization in Corporate Governance.
 
   She is the author of several books, including The Woman You Are Meant to Be and Woman in Pieces: Restoring the Dignity of Womanhood. Through her writing, teaching, and leadership engagements, Susan continues to inspire personal growth, ethical leadership, and positive social transformation.
-founder_quote: '"Leadership is not just about strategic management; it''s about emotional intelligence and understanding your core assignment in life."'
+founder_quote: ' '
 moses_name: Moses Osagiede
 moses_title: Associate Trainer
 moses_image: /uploads/Moses-Osagiende.jpeg
@@ -27,12 +27,6 @@ core_team:
   - name: Jini Kingsley
     title: PhD Candidate - Ghana
     initials: JK
-  - name: Mubarak Thiep
-    title: PhD Student - South Sudan
-    initials: MT
-  - name: Dr. Ruth Waweru
-    title: Kenya
-    initials: RW
 partnerships:
   - title: Corporate Partnerships
     icon: fas fa-building
