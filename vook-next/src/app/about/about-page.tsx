@@ -30,7 +30,7 @@ export default function AboutPage(props: any) {
       <section id="profile" className="section-padding">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-md-5" style={{ position: "relative" }}>
+            <div className="col-5" style={{ position: "relative" }}>
               <ScrollReveal>
                 <div className="premium-image-container">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -38,7 +38,7 @@ export default function AboutPage(props: any) {
                 </div>
               </ScrollReveal>
             </div>
-            <div className="col-md-7" style={{ paddingLeft: "2rem" }}>
+            <div className="col-7" style={{ paddingLeft: "2rem" }}>
               <ScrollReveal delay={200}>
                 <div className="section-title">
                   <span className="subtitle">Founder's Profile</span>
@@ -57,7 +57,7 @@ export default function AboutPage(props: any) {
           </div>
 
           <div className="row align-items-center" style={{ marginTop: "6rem" }}>
-            <div className="col-md-7 order-2 order-md-1" style={{ paddingRight: "2rem" }}>
+            <div className="col-7" style={{ paddingRight: "2rem" }}>
               <ScrollReveal delay={200}>
                 <div className="section-title">
                   <span className="subtitle">Leadership Scholar</span>
@@ -70,7 +70,7 @@ export default function AboutPage(props: any) {
                 </p>
               </ScrollReveal>
             </div>
-            <div className="col-md-5 order-1 order-md-2" style={{ position: "relative" }}>
+            <div className="col-5" style={{ position: "relative" }}>
               <ScrollReveal>
                 <div className="premium-image-container">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
