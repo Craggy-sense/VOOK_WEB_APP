@@ -1,7 +1,7 @@
 ---
 slide1_image: '/uploads/nature_books_leadership_bg.png'
-slide1_title: Welcome to Vook Voice International
-slide1_subtitle: Availing knowledge to all
+slide1_title: Welcome to
+slide1_subtitle: Vook Voice International
 slide1_text: ''
 slide2_image: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=2070&auto=format&fit=crop'
 slide2_title: 'Generating, Packaging, and Sharing Knowledge for Transformation'

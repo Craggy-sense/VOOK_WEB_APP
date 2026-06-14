@@ -147,7 +147,7 @@ export default defineConfig({
             name: "category", 
             label: "Category", 
             options: [
-              { label: "Leadership and Governance", value: "leadership" },
+              { label: "Leadership", value: "leadership" },
               { label: "Peace Building", value: "peace-building" },
               { label: "Governance", value: "governance" }
             ],

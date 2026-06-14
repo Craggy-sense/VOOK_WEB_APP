@@ -81,8 +81,11 @@ img {
 }
 
 .text-center { text-align: center; }
-.text-white h2, .text-white p, .text-white h4, .text-white span { color: var(--bg-white) !important; }
+.text-white h2, .text-white p, .text-white h4, .text-white span { color: var(--accent-cream) !important; }
 .text-muted { color: var(--text-muted); }
+
+/* Global Icon Color per user request */
+i[class*="fa-"], .f-icon, .feature-icon, .icon { color: var(--accent-red) !important; }
 
 .mt-3 { margin-top: 1rem; }
 .mt-4 { margin-top: 1.5rem; }
@@ -189,13 +192,37 @@ img {
 
 .btn-corporate-secondary {
     background-color: transparent;
-    color: var(--bg-white);
+    color: var(--accent-cream);
     border-color: var(--accent-red);
 }
 
 .btn-corporate-secondary:hover {
     background-color: var(--accent-red);
-    color: var(--bg-white);
+    color: var(--accent-cream);
+}
+
+.btn-corporate-red {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: var(--accent-red);
+    color: var(--accent-cream);
+    border: 2px solid var(--accent-red);
+    transition: var(--transition-smooth);
+}
+
+.btn-corporate-red:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+    color: var(--accent-cream);
 }
 
 /* ── Modern Header ── */
@@ -488,7 +515,7 @@ img {
 
 .slide-content .main-title {
     font-size: clamp(3rem, 6vw, 5rem);
-    color: var(--bg-white);
+    color: var(--accent-cream);
     margin-bottom: 0.5rem;
     line-height: 1.1;
 }
@@ -499,7 +526,7 @@ img {
 
 .slide-content .main-subtitle {
     font-size: clamp(1.5rem, 3vw, 2.2rem);
-    color: var(--bg-white);
+    color: var(--accent-cream);
     font-weight: 400;
     margin-bottom: 1.5rem;
 }

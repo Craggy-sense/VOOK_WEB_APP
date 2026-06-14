@@ -27,6 +27,13 @@ export default function Footer({ settings }: { settings: any }) {
             <p className="mb-4">
               Availing Knowledge to the People. A registered NGO in Kenya dedicated to empowerment, leadership training, and spiritual growth.
             </p>
+            {/* Social Media Icons moved to left side under description */}
+            <div className="flex gap-4" style={{ justifyContent: "flex-start", marginTop: "1.5rem" }}>
+              <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-whatsapp"></i></a>
+              <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-linkedin-in"></i></a>
+              <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-twitter"></i></a>
+              <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-facebook-f"></i></a>
+            </div>
           </div>
           
           <div className="col-7 row">
@@ -57,16 +64,6 @@ export default function Footer({ settings }: { settings: any }) {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        {/* Centered Social Media Icons */}
-        <div className="container" style={{ marginTop: "3rem" }}>
-          <div className="flex gap-4" style={{ justifyContent: "center" }}>
-            <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-whatsapp"></i></a>
-            <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-twitter"></i></a>
-            <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-facebook-f"></i></a>
           </div>
         </div>
       </div>

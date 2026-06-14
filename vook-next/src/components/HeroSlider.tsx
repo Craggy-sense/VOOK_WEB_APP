@@ -20,9 +20,9 @@ export default function HeroSlider({ data }: { data: any }) {
               <div className="slide-text">
                 <p>{data.slide1_text}</p>
               </div>
-              <div className="slide-actions">
-                <Link href="/about" className="btn-corporate-primary">Discover More</Link>
-                <Link href="/courses" className="btn-corporate-secondary">View Courses</Link>
+              <div className="slide-actions" style={{ justifyContent: "center" }}>
+                <Link href="/about" className="btn-corporate-red">Discover More</Link>
+                <Link href="/courses" className="btn-corporate-red">View Courses</Link>
               </div>
             </div>
           </div>
@@ -37,9 +37,9 @@ export default function HeroSlider({ data }: { data: any }) {
               <div className="slide-text">
                 <p>{data.slide2_text}</p>
               </div>
-              <div className="slide-actions">
-                <button className="btn-corporate-primary" onClick={() => document.dispatchEvent(new CustomEvent('openModal', {detail: 'Register'}))}>Register Now</button>
-                <Link href="/programs" className="btn-corporate-secondary">Our Programs</Link>
+              <div className="slide-actions" style={{ justifyContent: "center" }}>
+                <button className="btn-corporate-red" onClick={() => document.dispatchEvent(new CustomEvent('openModal', {detail: 'Register'}))}>Register Now</button>
+                <Link href="/programs" className="btn-corporate-red">Our Programs</Link>
               </div>
             </div>
           </div>
