@@ -3,9 +3,7 @@ import { defineConfig } from "tinacms";
 var branch = "main";
 var config_default = defineConfig({
   branch,
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
-  token: process.env.TINA_TOKEN,
-  // Keep token secret
+  // clientId and token removed to allow local-only builds without a TinaCloud account.
   build: {
     outputFolder: "admin",
     publicFolder: "public"
