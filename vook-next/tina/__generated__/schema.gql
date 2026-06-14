@@ -107,9 +107,17 @@ type PagesCore_team {
   title: String
   initials: String
   country: String
+  image: String
+  bio: String
 }
 
 type PagesPartnerships {
+  title: String
+  icon: String
+  desc: String
+}
+
+type PagesCommunity_groups {
   title: String
   icon: String
   desc: String
@@ -135,6 +143,11 @@ type Pages implements Node & Document {
   welcome_title: String
   vision: String
   mission: String
+  values: String
+  what_we_do: String
+  company_profile: String
+  our_impact: String
+  why_choose_vvi: String
   feature_boxes: [PagesFeature_boxes]
   founder_name: String
   founder_title: String
@@ -147,6 +160,7 @@ type Pages implements Node & Document {
   moses_bio: String
   core_team: [PagesCore_team]
   partnerships: [PagesPartnerships]
+  community_groups: [PagesCommunity_groups]
   programs_hero_title: String
   programs: [PagesPrograms]
   courses_hero_title: String
@@ -182,9 +196,17 @@ input PagesCore_teamFilter {
   title: StringFilter
   initials: StringFilter
   country: StringFilter
+  image: ImageFilter
+  bio: StringFilter
 }
 
 input PagesPartnershipsFilter {
+  title: StringFilter
+  icon: StringFilter
+  desc: StringFilter
+}
+
+input PagesCommunity_groupsFilter {
   title: StringFilter
   icon: StringFilter
   desc: StringFilter
@@ -210,6 +232,11 @@ input PagesFilter {
   welcome_title: StringFilter
   vision: StringFilter
   mission: StringFilter
+  values: StringFilter
+  what_we_do: StringFilter
+  company_profile: StringFilter
+  our_impact: StringFilter
+  why_choose_vvi: StringFilter
   feature_boxes: PagesFeature_boxesFilter
   founder_name: StringFilter
   founder_title: StringFilter
@@ -222,6 +249,7 @@ input PagesFilter {
   moses_bio: StringFilter
   core_team: PagesCore_teamFilter
   partnerships: PagesPartnershipsFilter
+  community_groups: PagesCommunity_groupsFilter
   programs_hero_title: StringFilter
   programs: PagesProgramsFilter
   courses_hero_title: StringFilter
@@ -384,9 +412,17 @@ input PagesCore_teamMutation {
   title: String
   initials: String
   country: String
+  image: String
+  bio: String
 }
 
 input PagesPartnershipsMutation {
+  title: String
+  icon: String
+  desc: String
+}
+
+input PagesCommunity_groupsMutation {
   title: String
   icon: String
   desc: String
@@ -412,6 +448,11 @@ input PagesMutation {
   welcome_title: String
   vision: String
   mission: String
+  values: String
+  what_we_do: String
+  company_profile: String
+  our_impact: String
+  why_choose_vvi: String
   feature_boxes: [PagesFeature_boxesMutation]
   founder_name: String
   founder_title: String
@@ -424,6 +465,7 @@ input PagesMutation {
   moses_bio: String
   core_team: [PagesCore_teamMutation]
   partnerships: [PagesPartnershipsMutation]
+  community_groups: [PagesCommunity_groupsMutation]
   programs_hero_title: String
   programs: [PagesProgramsMutation]
   courses_hero_title: String

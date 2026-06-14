@@ -74,18 +74,18 @@ export default function Header({ settings }: { settings: any }) {
               </li>
               
               <li className={`header-nav-item has-dropdown ${activeDropdown === "about" ? "active" : ""}`}>
-                <Link href="/about" className="header-nav-link" onClick={(e) => toggleDropdown(e, "about")}>
+                <Link href="/about/who-we-are" className="header-nav-link" onClick={(e) => toggleDropdown(e, "about")}>
                   About Us <i className="fas fa-chevron-down dropdown-arrow"></i>
                 </Link>
                 <ul className="header-dropdown-menu">
                   <li className="header-dropdown-item">
-                    <Link href="/about#profile" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Founder's Profile</Link>
+                    <Link href="/about/who-we-are" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Who We Are</Link>
                   </li>
                   <li className="header-dropdown-item">
-                    <Link href="/about#team" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Core Team</Link>
+                    <Link href="/about/core-team" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Core Team</Link>
                   </li>
                   <li className="header-dropdown-item">
-                    <Link href="/about#partners" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Our Partners</Link>
+                    <Link href="/about/community" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Our Community</Link>
                   </li>
                 </ul>
               </li>
@@ -112,6 +112,24 @@ export default function Header({ settings }: { settings: any }) {
                   </li>
                 </ul>
               </li>
+
+              <li className={`header-nav-item has-dropdown ${activeDropdown === "resources" ? "active" : ""}`}>
+                <Link href="#" className="header-nav-link" onClick={(e) => toggleDropdown(e, "resources")}>
+                  Resources <i className="fas fa-chevron-down dropdown-arrow"></i>
+                </Link>
+                <ul className="header-dropdown-menu">
+                  <li className="header-dropdown-item">
+                    <Link href="/resources/blogs" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Blogs & Learning Resources</Link>
+                  </li>
+                  <li className="header-dropdown-item">
+                    <Link href="/resources/vlogs" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Vlogs</Link>
+                  </li>
+                  <li className="header-dropdown-item">
+                    <Link href="/resources/pictures" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Pictures</Link>
+                  </li>
+                </ul>
+              </li>
+
             </ul>
 
             {/* Mobile Only Contact Block */}

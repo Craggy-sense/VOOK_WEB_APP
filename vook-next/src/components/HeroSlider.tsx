@@ -5,12 +5,7 @@ import Link from "next/link";
 export default function HeroSlider({ data }: { data: any }) {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setActiveSlide((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(slideInterval);
-  }, []);
+  // Autoplay disabled per user request
 
   return (
     <section className="slider-container" aria-label="Hero Slider">
@@ -21,7 +16,7 @@ export default function HeroSlider({ data }: { data: any }) {
             <div className="slide-content">
               {/* Note: In a real app we might parse HTML, but for now we just render the string or use a simple replace if we want highlight */}
               <h1 className="main-title">{data.slide1_title}</h1>
-              <h2 className="main-subtitle">{data.slide1_subtitle}</h2>
+              <h2 className="main-subtitle" style={{ color: "var(--accent-red)", textAlign: "center", display: "block", width: "100%" }}>{data.slide1_subtitle}</h2>
               <div className="slide-text">
                 <p>{data.slide1_text}</p>
               </div>
@@ -38,7 +33,7 @@ export default function HeroSlider({ data }: { data: any }) {
           <div className="container" style={{position: 'relative', height: '100%', display: 'flex', alignItems: 'center'}}>
             <div className="slide-content">
               <h1 className="main-title">{data.slide2_title}</h1>
-              <h2 className="main-subtitle">{data.slide2_subtitle}</h2>
+              <h2 className="main-subtitle" style={{ color: "var(--accent-red)", textAlign: "center", display: "block", width: "100%" }}>{data.slide2_subtitle}</h2>
               <div className="slide-text">
                 <p>{data.slide2_text}</p>
               </div>

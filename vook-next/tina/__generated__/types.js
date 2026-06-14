@@ -19,6 +19,11 @@ export const PagesPartsFragmentDoc = gql`
   welcome_title
   vision
   mission
+  values
+  what_we_do
+  company_profile
+  our_impact
+  why_choose_vvi
   feature_boxes {
     __typename
     title
@@ -40,8 +45,16 @@ export const PagesPartsFragmentDoc = gql`
     title
     initials
     country
+    image
+    bio
   }
   partnerships {
+    __typename
+    title
+    icon
+    desc
+  }
+  community_groups {
     __typename
     title
     icon

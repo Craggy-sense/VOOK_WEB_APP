@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
-export default function ScrollReveal({ children, delay = 0 }: { children: React.ReactNode, delay?: number }) {
+export default function ScrollReveal({ children, delay = 0, style }: { children: React.ReactNode, delay?: number, style?: React.CSSProperties }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function ScrollReveal({ children, delay = 0 }: { children: React.
   }, [delay]);
 
   return (
-    <div ref={ref} className="fade-up">
+    <div ref={ref} className="fade-up" style={style}>
       {children}
     </div>
   );

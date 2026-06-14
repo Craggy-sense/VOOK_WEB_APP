@@ -9,7 +9,7 @@ export default function Footer({ settings }: { settings: any }) {
         <div className="container row">
           <div className="col-5">
             <div style={{ 
-              backgroundColor: 'white', 
+              backgroundColor: 'var(--accent-cream)', 
               padding: '12px 24px', 
               borderRadius: '8px', 
               display: 'inline-block', 
@@ -27,17 +27,11 @@ export default function Footer({ settings }: { settings: any }) {
             <p className="mb-4">
               Availing Knowledge to the People. A registered NGO in Kenya dedicated to empowerment, leadership training, and spiritual growth.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="header-social-link"><i className="fab fa-whatsapp"></i></a>
-              <a href="#" className="header-social-link"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#" className="header-social-link"><i className="fab fa-twitter"></i></a>
-              <a href="#" className="header-social-link"><i className="fab fa-facebook-f"></i></a>
-            </div>
           </div>
           
           <div className="col-7 row">
             <div className="col-6 footer-links">
-              <h4>Quick Links</h4>
+              <h4 style={{ color: "var(--accent-red)" }}>Quick Links</h4>
               <ul>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
@@ -47,7 +41,7 @@ export default function Footer({ settings }: { settings: any }) {
             </div>
             
             <div className="col-6 footer-contact-info">
-              <h4>Contact Us</h4>
+              <h4 style={{ color: "var(--accent-red)" }}>Contact Us</h4>
               <ul>
                 <li>
                   <i className="fas fa-map-marker-alt f-icon"></i>
@@ -63,6 +57,16 @@ export default function Footer({ settings }: { settings: any }) {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+
+        {/* Centered Social Media Icons */}
+        <div className="container" style={{ marginTop: "3rem" }}>
+          <div className="flex gap-4" style={{ justifyContent: "center" }}>
+            <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-whatsapp"></i></a>
+            <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-linkedin-in"></i></a>
+            <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-twitter"></i></a>
+            <a href="#" className="header-social-link" style={{ fontSize: "1.5rem" }}><i className="fab fa-facebook-f"></i></a>
           </div>
         </div>
       </div>

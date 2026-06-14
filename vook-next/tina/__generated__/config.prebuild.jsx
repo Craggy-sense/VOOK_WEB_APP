@@ -33,6 +33,11 @@ var config_default = defineConfig({
           { type: "string", name: "welcome_title", label: "Home Welcome Title" },
           { type: "string", name: "vision", label: "Vision Statement" },
           { type: "string", name: "mission", label: "Mission Statement" },
+          { type: "string", name: "values", label: "Our Values", ui: { component: "textarea" } },
+          { type: "string", name: "what_we_do", label: "What We Do", ui: { component: "textarea" } },
+          { type: "string", name: "company_profile", label: "Company Profile", ui: { component: "textarea" } },
+          { type: "string", name: "our_impact", label: "Our Impact", ui: { component: "textarea" } },
+          { type: "string", name: "why_choose_vvi", label: "Why Choose VVI?", ui: { component: "textarea" } },
           {
             type: "object",
             list: true,
@@ -68,7 +73,9 @@ var config_default = defineConfig({
               { type: "string", name: "name", label: "Name" },
               { type: "string", name: "title", label: "Title/Role" },
               { type: "string", name: "initials", label: "Initials" },
-              { type: "string", name: "country", label: "Location/Country" }
+              { type: "string", name: "country", label: "Location/Country" },
+              { type: "image", name: "image", label: "Profile Image" },
+              { type: "string", name: "bio", label: "Biography", ui: { component: "textarea" } }
             ]
           },
           {
@@ -83,6 +90,20 @@ var config_default = defineConfig({
               { type: "string", name: "title", label: "Title" },
               { type: "string", name: "icon", label: "Icon (FontAwesome class)" },
               { type: "string", name: "desc", label: "Description" }
+            ]
+          },
+          {
+            type: "object",
+            list: true,
+            name: "community_groups",
+            label: "Our Community (About Page)",
+            ui: { itemProps: (item) => {
+              return { label: item?.title || "Community Group" };
+            } },
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "icon", label: "Icon (FontAwesome class)" },
+              { type: "string", name: "desc", label: "Description", ui: { component: "textarea" } }
             ]
           },
           { type: "string", name: "programs_hero_title", label: "Programs Hero Title" },

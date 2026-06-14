@@ -25,7 +25,9 @@ export default function ProgramsPage(props: any) {
         <div className="container">
           <div className="section-title light text-center mb-0">
             <span className="subtitle">Operations</span>
-            <h2 data-tina-field={tinaField(page, "programs_hero_title")}>{page.programs_hero_title}</h2>
+            <h2 data-tina-field={tinaField(page, "programs_hero_title")} style={{ color: "#F8F1AE" }}>
+              {page.programs_hero_title}
+            </h2>
             <div className="title-underline center"></div>
           </div>
         </div>

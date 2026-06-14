@@ -3,10 +3,11 @@
 
 :root {
     /* Corporate Theme Colors */
-    --primary-green: #1A962B;
-    --primary-dark: #10661b;
-    --accent-red: #CC0000;
-    --accent-dark: #990000;
+    --primary-green: #19711D;
+    --primary-dark: #023d06;
+    --accent-red: #C80815; /* Vibrant deep crimson/berry red for premium highlights */
+    --accent-dark: #7A1215;
+    --accent-cream: #F8F1AE; /* Nature cream yellow accent */
     
     --navy-dark: #0c1527;
     --navy-light: #1a2b59;
@@ -177,24 +178,24 @@ img {
 .btn-corporate-primary {
     background-color: var(--primary-green);
     color: var(--bg-white);
-    border-color: var(--primary-green);
+    border-color: var(--accent-red);
 }
 
 .btn-corporate-primary:hover {
     background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
+    border-color: var(--accent-red);
     color: var(--bg-white);
 }
 
 .btn-corporate-secondary {
     background-color: transparent;
     color: var(--bg-white);
-    border-color: var(--bg-white);
+    border-color: var(--accent-red);
 }
 
 .btn-corporate-secondary:hover {
-    background-color: var(--bg-white);
-    color: var(--navy-dark);
+    background-color: var(--accent-red);
+    color: var(--bg-white);
 }
 
 /* ── Modern Header ── */
@@ -219,13 +220,14 @@ img {
 }
 
 .header-top-bar {
-    background: var(--navy-dark);
+    background: var(--primary-green);
     color: var(--bg-white);
     padding: 10px 0;
     font-size: 0.85rem;
     transition: max-height 0.3s ease, padding 0.3s ease;
     max-height: 50px;
     overflow: hidden;
+    border-bottom: 2px solid var(--accent-cream);
 }
 
 .modern-header.fixed-header .header-top-bar {
@@ -252,8 +254,8 @@ img {
     gap: 0.5rem;
 }
 
-.header-top-item:hover { color: var(--primary-green); }
-.header-top-item .icon { color: var(--primary-green); }
+.header-top-item:hover { color: var(--accent-cream); }
+.header-top-item .icon { color: var(--accent-cream); }
 
 .header-social-link {
     color: var(--bg-white);
@@ -265,10 +267,12 @@ img {
     justify-content: center;
     border-radius: 4px;
     font-size: 0.85rem;
+    transition: var(--transition-smooth);
 }
 
 .header-social-link:hover {
-    background: var(--primary-green);
+    background: var(--accent-cream);
+    color: var(--primary-green);
 }
 
 .header-main-nav {
@@ -360,7 +364,7 @@ img {
 }
 
 .header-phone-btn {
-    background: var(--accent-red);
+    background: var(--primary-green);
     color: var(--bg-white);
     padding: 0.7rem 1.5rem;
     border-radius: 50px;
@@ -369,9 +373,10 @@ img {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(4, 92, 10, 0.2);
     cursor: pointer;
-    border: none;
+    border: 2px solid var(--primary-green);
+    transition: var(--transition-smooth);
 }
 
 .mobile-only-contact {
@@ -379,7 +384,9 @@ img {
 }
 
 .header-phone-btn:hover {
-    background: var(--accent-dark);
+    background: var(--accent-cream);
+    color: var(--primary-green);
+    border-color: var(--primary-green);
     transform: translateY(-2px);
 }
 
@@ -486,8 +493,8 @@ img {
     line-height: 1.1;
 }
 
-.slide-1 .main-title .highlight, .slide-2 .main-title {
-    color: var(--primary-green);
+.slide-1 .main-title, .slide-2 .main-title {
+    color: var(--accent-cream);
 }
 
 .slide-content .main-subtitle {
@@ -745,8 +752,9 @@ img {
 }
 
 .prog-tag {
-    background: rgba(204, 0, 0, 0.1);
-    color: var(--accent-red);
+    background: var(--accent-cream);
+    color: var(--primary-green);
+    border: 1px solid rgba(4, 92, 10, 0.2);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.3rem 0.6rem;
@@ -816,8 +824,8 @@ img {
 
 /* ── Professional Footer ── */
 .corporate-footer {
-    background-color: #080e1a;
-    color: #a0aec0;
+    background-color: #023806;
+    color: #e0e8dc;
 }
 
 .footer-top {
@@ -826,11 +834,10 @@ img {
 
 .footer-logo {
     height: 50px;
-    filter: brightness(0) invert(1);
 }
 
 .footer-links h4, .footer-contact-info h4 {
-    color: var(--bg-white);
+    color: var(--accent-cream);
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     position: relative;
@@ -844,7 +851,7 @@ img {
     left: 0;
     width: 40px;
     height: 2px;
-    background: var(--primary-green);
+    background: var(--accent-cream);
 }
 
 .footer-links ul li {
@@ -852,11 +859,11 @@ img {
 }
 
 .footer-links ul li a {
-    color: #a0aec0;
+    color: #e0e8dc;
 }
 
 .footer-links ul li a:hover {
-    color: var(--primary-green);
+    color: var(--accent-cream);
     padding-left: 5px;
 }
 
@@ -868,18 +875,18 @@ img {
 }
 
 .f-icon {
-    color: var(--primary-green);
+    color: var(--accent-cream);
 }
 
 .footer-contact-info ul li a {
-    color: #a0aec0;
+    color: #e0e8dc;
 }
 .footer-contact-info ul li a:hover {
-    color: var(--bg-white);
+    color: var(--accent-cream);
 }
 
 .footer-bottom {
-    background: #050910;
+    background: #011f03;
     padding: 1.5rem 0;
     font-size: 0.85rem;
     text-align: center;
@@ -971,6 +978,138 @@ img {
     width: 100%;
     margin-top: 1rem;
 }
+
+/* ── Team Modal ── */
+.team-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    padding: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.team-modal-content {
+    background: var(--bg-white);
+    border-radius: 16px;
+    max-width: 1200px;
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 0.3s ease-out;
+    padding: 0;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.team-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary-dark);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.team-modal-close:hover {
+    background: var(--accent-red);
+    color: var(--bg-white);
+}
+
+.team-modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .team-modal-body {
+        flex-direction: row;
+    }
+}
+
+.team-modal-sidebar {
+    flex: 0 0 450px;
+    background-color: var(--primary-dark);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--bg-white);
+}
+
+.team-modal-image-wrapper {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 6px solid var(--bg-white);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.team-modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-modal-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--bg-white);
+}
+
+.team-modal-title {
+    font-size: 1.1rem;
+    color: #F39C12;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.team-modal-content-area {
+    flex: 1;
+    padding: 3rem 2rem;
+    background-color: var(--bg-white);
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.team-modal-heading {
+    font-size: 1.6rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.team-modal-bio {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
 
 /* ── Scroll Reveal Animations ── */
 .fade-up {
@@ -1179,12 +1318,12 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-top: 4px solid var(--navy-dark);
+    border-top: 4px solid var(--accent-cream);
 }
 
 .premium-course-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(4, 92, 10, 0.08);
     border-top-color: var(--primary-green);
 }
 
