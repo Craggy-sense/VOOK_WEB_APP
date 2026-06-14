@@ -76,7 +76,7 @@ img {
 }
 
 .section-padding {
-    padding: 7rem 0;
+    padding: 3rem 0;
 }
 
 .text-center { text-align: center; }
@@ -571,27 +571,27 @@ img {
 .feature-box {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
     background: var(--bg-white);
-    padding: 2.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: var(--transition-smooth);
     border-bottom: 4px solid transparent;
 }
 
 .feature-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     border-bottom-color: var(--primary-green);
 }
 
 .feature-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--primary-green);
     flex-shrink: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .feature-text h4 {
