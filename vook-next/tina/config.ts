@@ -123,6 +123,17 @@ export default defineConfig({
         format: "md",
         fields: [
           { type: "string", name: "title", label: "Title", isTitle: true, required: true },
+          { 
+            type: "string", 
+            name: "category", 
+            label: "Category", 
+            options: [
+              { label: "Leadership and Governance", value: "leadership" },
+              { label: "Peace Building", value: "peace-building" },
+              { label: "Governance", value: "governance" }
+            ],
+            required: true 
+          },
           { type: "string", name: "icon", label: "Icon (FontAwesome class)" },
           { type: "string", name: "desc", label: "Description", ui: { component: "textarea" } },
         ],

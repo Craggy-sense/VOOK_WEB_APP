@@ -96,10 +96,21 @@ export default function Header({ settings }: { settings: any }) {
                 </Link>
               </li>
 
-              <li className="header-nav-item">
-                <Link href="/courses" className="header-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
-                  Courses 2026
+              <li className={`header-nav-item has-dropdown ${activeDropdown === "courses" ? "active" : ""}`}>
+                <Link href="/courses" className="header-nav-link" onClick={(e) => toggleDropdown(e, "courses")}>
+                  Courses <i className="fas fa-chevron-down dropdown-arrow"></i>
                 </Link>
+                <ul className="header-dropdown-menu">
+                  <li className="header-dropdown-item">
+                    <Link href="/courses/leadership" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Leadership and Governance</Link>
+                  </li>
+                  <li className="header-dropdown-item">
+                    <Link href="/courses/peace-building" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Peace Building</Link>
+                  </li>
+                  <li className="header-dropdown-item">
+                    <Link href="/courses/governance" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Governance</Link>
+                  </li>
+                </ul>
               </li>
             </ul>
 

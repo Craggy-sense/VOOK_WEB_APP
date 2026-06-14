@@ -74,6 +74,7 @@ export const CoursesPartsFragmentDoc = gql`
     fragment CoursesParts on Courses {
   __typename
   title
+  category
   icon
   desc
 }

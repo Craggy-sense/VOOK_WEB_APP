@@ -270,6 +270,7 @@ type SettingsConnection implements Connection {
 
 type Courses implements Node & Document {
   title: String!
+  category: String!
   icon: String
   desc: String
   id: ID!
@@ -279,6 +280,7 @@ type Courses implements Node & Document {
 
 input CoursesFilter {
   title: StringFilter
+  category: StringFilter
   icon: StringFilter
   desc: StringFilter
 }
@@ -438,6 +440,7 @@ input SettingsMutation {
 
 input CoursesMutation {
   title: String
+  category: String
   icon: String
   desc: String
 }

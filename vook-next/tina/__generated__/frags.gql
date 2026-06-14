@@ -64,6 +64,7 @@ fragment SettingsParts on Settings {
 fragment CoursesParts on Courses {
   __typename
   title
+  category
   icon
   desc
 }

@@ -404,6 +404,7 @@ export type SettingsConnection = Connection & {
 export type Courses = Node & Document & {
   __typename?: 'Courses';
   title: Scalars['String']['output'];
+  category: Scalars['String']['output'];
   icon?: Maybe<Scalars['String']['output']>;
   desc?: Maybe<Scalars['String']['output']>;
   id: Scalars['ID']['output'];
@@ -413,6 +414,7 @@ export type Courses = Node & Document & {
 
 export type CoursesFilter = {
   title?: InputMaybe<StringFilter>;
+  category?: InputMaybe<StringFilter>;
   icon?: InputMaybe<StringFilter>;
   desc?: InputMaybe<StringFilter>;
 };
@@ -659,6 +661,7 @@ export type SettingsMutation = {
 
 export type CoursesMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
+  category?: InputMaybe<Scalars['String']['input']>;
   icon?: InputMaybe<Scalars['String']['input']>;
   desc?: InputMaybe<Scalars['String']['input']>;
 };
@@ -676,7 +679,7 @@ export type PagesPartsFragment = { __typename: 'Pages', slide1_image?: string | 
 
 export type SettingsPartsFragment = { __typename: 'Settings', primary_color?: string | null, email?: string | null, phone?: string | null, address?: string | null };
 
-export type CoursesPartsFragment = { __typename: 'Courses', title: string, icon?: string | null, desc?: string | null };
+export type CoursesPartsFragment = { __typename: 'Courses', title: string, category: string, icon?: string | null, desc?: string | null };
 
 export type BlogsPartsFragment = { __typename: 'Blogs', title: string, date?: string | null, author?: string | null, image?: string | null, description?: string | null, body?: any | null };
 
@@ -723,7 +726,7 @@ export type CoursesQueryVariables = Exact<{
 }>;
 
 
-export type CoursesQuery = { __typename?: 'Query', courses: { __typename: 'Courses', id: string, title: string, icon?: string | null, desc?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type CoursesQuery = { __typename?: 'Query', courses: { __typename: 'Courses', id: string, title: string, category: string, icon?: string | null, desc?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type CoursesConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -735,7 +738,7 @@ export type CoursesConnectionQueryVariables = Exact<{
 }>;
 
 
-export type CoursesConnectionQuery = { __typename?: 'Query', coursesConnection: { __typename?: 'CoursesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'CoursesConnectionEdges', cursor: string, node?: { __typename: 'Courses', id: string, title: string, icon?: string | null, desc?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type CoursesConnectionQuery = { __typename?: 'Query', coursesConnection: { __typename?: 'CoursesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'CoursesConnectionEdges', cursor: string, node?: { __typename: 'Courses', id: string, title: string, category: string, icon?: string | null, desc?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type BlogsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -825,6 +828,7 @@ export const CoursesPartsFragmentDoc = gql`
     fragment CoursesParts on Courses {
   __typename
   title
+  category
   icon
   desc
 }
