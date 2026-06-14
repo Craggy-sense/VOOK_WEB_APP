@@ -12,17 +12,17 @@ export default function HeroSlider({ data }: { data: any }) {
       <div className="slider">
         <div className={`slide slide-1 ${activeSlide === 0 ? "active-slide" : ""}`} style={{backgroundImage: `url('${data.slide1_image}')`}}>
           <div className="slide-overlay"></div>
-          <div className="container" style={{position: 'relative', height: '100%', display: 'flex', alignItems: 'center'}}>
-            <div className="slide-content">
+          <div className="container" style={{position: 'relative', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <div className="slide-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               {/* Note: In a real app we might parse HTML, but for now we just render the string or use a simple replace if we want highlight */}
               <h1 className="main-title" style={{ marginBottom: "0", lineHeight: "1.2", textAlign: "center" }}>{data.slide1_title}</h1>
-              <h1 className="main-title" style={{ marginTop: "0", lineHeight: "1.2", whiteSpace: "nowrap" }}>{data.slide1_subtitle}</h1>
+              <h1 className="main-title" style={{ marginTop: "0", lineHeight: "1.2", whiteSpace: "nowrap", textAlign: "center" }}>{data.slide1_subtitle}</h1>
               {data.slide1_text && (
                 <h2 className="main-subtitle" style={{ color: "var(--accent-red)", textAlign: "center", display: "block", width: "100%", marginTop: "1rem", fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}>
                   {data.slide1_text}
                 </h2>
               )}
-              <div className="slide-actions" style={{ justifyContent: "center" }}>
+              <div className="slide-actions" style={{ justifyContent: "center", width: "100%", marginTop: "2rem" }}>
                 <Link href="/about" className="btn-corporate-red">Discover More</Link>
                 <Link href="/courses" className="btn-corporate-red">View Courses</Link>
               </div>
@@ -32,14 +32,14 @@ export default function HeroSlider({ data }: { data: any }) {
         
         <div className={`slide slide-2 ${activeSlide === 1 ? "active-slide" : ""}`} style={{backgroundImage: `url('${data.slide2_image}')`}}>
           <div className="slide-overlay"></div>
-          <div className="container" style={{position: 'relative', height: '100%', display: 'flex', alignItems: 'center'}}>
-            <div className="slide-content">
-              <h1 className="main-title">{data.slide2_title}</h1>
+          <div className="container" style={{position: 'relative', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <div className="slide-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <h1 className="main-title" style={{ textAlign: "center" }}>{data.slide2_title}</h1>
               <h2 className="main-subtitle" style={{ color: "var(--accent-red)", textAlign: "center", display: "block", width: "100%" }}>{data.slide2_subtitle}</h2>
-              <div className="slide-text">
+              <div className="slide-text" style={{ textAlign: "center" }}>
                 <p>{data.slide2_text}</p>
               </div>
-              <div className="slide-actions" style={{ justifyContent: "center" }}>
+              <div className="slide-actions" style={{ justifyContent: "center", width: "100%", marginTop: "2rem" }}>
                 <button className="btn-corporate-red" onClick={() => document.dispatchEvent(new CustomEvent('openModal', {detail: 'Register'}))}>Register Now</button>
                 <Link href="/programs" className="btn-corporate-red">Our Programs</Link>
               </div>
