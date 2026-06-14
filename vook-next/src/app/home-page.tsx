@@ -36,7 +36,7 @@ export default function HomePage(props: any) {
             </div>
             
             <div className="col-7">
-              <div className="grid-2" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem'}}>
+              <div className="grid-2">
                 {page.feature_boxes && page.feature_boxes.map((feature: any, index: number) => (
                   <ScrollReveal delay={(index + 1) * 100} key={index}>
                     <div className="feature-box" data-tina-field={tinaField(feature, "title")}>
