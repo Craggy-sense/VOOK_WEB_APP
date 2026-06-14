@@ -15,11 +15,13 @@ export default function HeroSlider({ data }: { data: any }) {
           <div className="container" style={{position: 'relative', height: '100%', display: 'flex', alignItems: 'center'}}>
             <div className="slide-content">
               {/* Note: In a real app we might parse HTML, but for now we just render the string or use a simple replace if we want highlight */}
-              <h1 className="main-title">{data.slide1_title}</h1>
-              <h2 className="main-subtitle" style={{ color: "var(--accent-red)", textAlign: "center", display: "block", width: "100%" }}>{data.slide1_subtitle}</h2>
-              <div className="slide-text">
-                <p>{data.slide1_text}</p>
-              </div>
+              <h1 className="main-title" style={{ marginBottom: "0", lineHeight: "1.2" }}>{data.slide1_title}</h1>
+              <h1 className="main-title" style={{ marginTop: "0", lineHeight: "1.2" }}>{data.slide1_subtitle}</h1>
+              {data.slide1_text && (
+                <h2 className="main-subtitle" style={{ color: "var(--accent-red)", textAlign: "center", display: "block", width: "100%", marginTop: "1rem", fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}>
+                  {data.slide1_text}
+                </h2>
+              )}
               <div className="slide-actions" style={{ justifyContent: "center" }}>
                 <Link href="/about" className="btn-corporate-red">Discover More</Link>
                 <Link href="/courses" className="btn-corporate-red">View Courses</Link>
