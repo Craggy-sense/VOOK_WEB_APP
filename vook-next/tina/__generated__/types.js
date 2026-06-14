@@ -48,19 +48,13 @@ export const PagesPartsFragmentDoc = gql`
     desc
   }
   programs_hero_title
-  departments {
+  programs {
     __typename
     id
     title
     icon
     short
     details
-  }
-  strategic_programs {
-    __typename
-    title
-    tag
-    desc
   }
   courses_hero_title
   beneficiaries_title

@@ -88,27 +88,15 @@ export default defineConfig({
           {
             type: "object",
             list: true,
-            name: "departments",
-            label: "Departments (Programs Page)",
-            ui: { itemProps: (item) => { return { label: item?.title || 'Department' } } },
+            name: "programs",
+            label: "Programs",
+            ui: { itemProps: (item) => { return { label: item?.title || 'Program' } } },
             fields: [
               { type: "string", name: "id", label: "ID (lowercase, no spaces)" },
               { type: "string", name: "title", label: "Title" },
               { type: "string", name: "icon", label: "Icon (FontAwesome class)" },
-              { type: "string", name: "short", label: "Short Description" },
+              { type: "string", name: "short", label: "Tagline" },
               { type: "string", name: "details", label: "Full Details", ui: { component: "textarea" } },
-            ]
-          },
-          {
-            type: "object",
-            list: true,
-            name: "strategic_programs",
-            label: "Strategic Programs",
-            ui: { itemProps: (item) => { return { label: item?.title || 'Program' } } },
-            fields: [
-              { type: "string", name: "title", label: "Title" },
-              { type: "string", name: "tag", label: "Tag (e.g. Outreach)" },
-              { type: "string", name: "desc", label: "Description" },
             ]
           },
           { type: "string", name: "courses_hero_title", label: "Courses Hero Title" },

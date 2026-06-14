@@ -12,8 +12,7 @@ export default function ProgramsPage(props: any) {
   });
 
   const page = data.pages;
-  const departments = page.departments || [];
-  const strategic_programs = page.strategic_programs || [];
+  const programs = page.programs || [];
 
   const closeModal = () => {
     setSelectedDept(null);
@@ -37,22 +36,22 @@ export default function ProgramsPage(props: any) {
           <ScrollReveal>
             <div className="section-title text-center">
               <span className="subtitle">Our Structure</span>
-              <h2>Operational Departments</h2>
+              <h2>Our Programs</h2>
               <div className="title-underline center"></div>
             </div>
           </ScrollReveal>
           
           <div className="grid-3 mt-5">
-            {departments.map((dept: any, index: number) => (
-              <ScrollReveal key={dept.id || index} delay={(index + 1) * 100}>
-                <div className="dept-card" style={{ padding: "3rem 2rem", textAlign: "center" }} data-tina-field={tinaField(dept, "title")}>
-                  <i className={dept.icon || "fas fa-users"} style={{ fontSize: "2.5rem", color: "var(--primary-green)", marginBottom: "1.5rem" }} data-tina-field={tinaField(dept, "icon")}></i>
-                  <h3 data-tina-field={tinaField(dept, "title")}>{dept.title}</h3>
-                  <p data-tina-field={tinaField(dept, "short")}>{dept.short}</p>
+            {programs.map((prog: any, index: number) => (
+              <ScrollReveal key={prog.id || index} delay={(index + 1) * 100}>
+                <div className="dept-card" style={{ padding: "3rem 2rem", textAlign: "center" }} data-tina-field={tinaField(prog, "title")}>
+                  <i className={prog.icon || "fas fa-users"} style={{ fontSize: "2.5rem", color: "var(--primary-green)", marginBottom: "1.5rem" }} data-tina-field={tinaField(prog, "icon")}></i>
+                  <h3 data-tina-field={tinaField(prog, "title")}>{prog.title}</h3>
+                  <p data-tina-field={tinaField(prog, "short")}>{prog.short}</p>
                   <button 
                     className="dept-link" 
                     style={{ background: "none", border: "none", padding: 0, cursor: "pointer", justifyContent: "center", width: "100%", fontSize: "0.9rem" }}
-                    onClick={() => setSelectedDept(dept)}
+                    onClick={() => setSelectedDept(prog)}
                   >
                     Learn More <span className="fas fa-arrow-right"></span>
                   </button>
@@ -92,39 +91,13 @@ export default function ProgramsPage(props: any) {
                     }, 300);
                   }}
                 >
-                  Contact Department
+                  Contact Program
                 </button>
               </div>
             </>
           )}
         </div>
       </div>
-
-      <section className="section-padding bg-gray">
-        <div className="container">
-          <ScrollReveal>
-            <div className="section-title text-center">
-              <span className="subtitle">Initiatives</span>
-              <h2>Strategic Programs</h2>
-              <div className="title-underline center"></div>
-            </div>
-          </ScrollReveal>
-          
-          <div className="grid-3 mt-5">
-            {strategic_programs.map((prog: any, index: number) => (
-              <ScrollReveal delay={(index + 1) * 100} key={index}>
-                <div className="prog-corporate-card" style={{ padding: "3rem 2rem" }} data-tina-field={tinaField(prog, "title")}>
-                  <div className="prog-header">
-                    <h4 data-tina-field={tinaField(prog, "title")}>{prog.title}</h4>
-                    <span className="prog-tag" data-tina-field={tinaField(prog, "tag")}>{prog.tag}</span>
-                  </div>
-                  <p className="mt-3" data-tina-field={tinaField(prog, "desc")}>{prog.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

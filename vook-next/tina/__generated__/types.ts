@@ -241,20 +241,13 @@ export type PagesPartnerships = {
   desc?: Maybe<Scalars['String']['output']>;
 };
 
-export type PagesDepartments = {
-  __typename?: 'PagesDepartments';
+export type PagesPrograms = {
+  __typename?: 'PagesPrograms';
   id?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   icon?: Maybe<Scalars['String']['output']>;
   short?: Maybe<Scalars['String']['output']>;
   details?: Maybe<Scalars['String']['output']>;
-};
-
-export type PagesStrategic_Programs = {
-  __typename?: 'PagesStrategic_programs';
-  title?: Maybe<Scalars['String']['output']>;
-  tag?: Maybe<Scalars['String']['output']>;
-  desc?: Maybe<Scalars['String']['output']>;
 };
 
 export type Pages = Node & Document & {
@@ -283,8 +276,7 @@ export type Pages = Node & Document & {
   core_team?: Maybe<Array<Maybe<PagesCore_Team>>>;
   partnerships?: Maybe<Array<Maybe<PagesPartnerships>>>;
   programs_hero_title?: Maybe<Scalars['String']['output']>;
-  departments?: Maybe<Array<Maybe<PagesDepartments>>>;
-  strategic_programs?: Maybe<Array<Maybe<PagesStrategic_Programs>>>;
+  programs?: Maybe<Array<Maybe<PagesPrograms>>>;
   courses_hero_title?: Maybe<Scalars['String']['output']>;
   beneficiaries_title?: Maybe<Scalars['String']['output']>;
   beneficiaries_text?: Maybe<Scalars['String']['output']>;
@@ -326,18 +318,12 @@ export type PagesPartnershipsFilter = {
   desc?: InputMaybe<StringFilter>;
 };
 
-export type PagesDepartmentsFilter = {
+export type PagesProgramsFilter = {
   id?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   icon?: InputMaybe<StringFilter>;
   short?: InputMaybe<StringFilter>;
   details?: InputMaybe<StringFilter>;
-};
-
-export type PagesStrategic_ProgramsFilter = {
-  title?: InputMaybe<StringFilter>;
-  tag?: InputMaybe<StringFilter>;
-  desc?: InputMaybe<StringFilter>;
 };
 
 export type PagesFilter = {
@@ -365,8 +351,7 @@ export type PagesFilter = {
   core_team?: InputMaybe<PagesCore_TeamFilter>;
   partnerships?: InputMaybe<PagesPartnershipsFilter>;
   programs_hero_title?: InputMaybe<StringFilter>;
-  departments?: InputMaybe<PagesDepartmentsFilter>;
-  strategic_programs?: InputMaybe<PagesStrategic_ProgramsFilter>;
+  programs?: InputMaybe<PagesProgramsFilter>;
   courses_hero_title?: InputMaybe<StringFilter>;
   beneficiaries_title?: InputMaybe<StringFilter>;
   beneficiaries_text?: InputMaybe<StringFilter>;
@@ -626,18 +611,12 @@ export type PagesPartnershipsMutation = {
   desc?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type PagesDepartmentsMutation = {
+export type PagesProgramsMutation = {
   id?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   icon?: InputMaybe<Scalars['String']['input']>;
   short?: InputMaybe<Scalars['String']['input']>;
   details?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type PagesStrategic_ProgramsMutation = {
-  title?: InputMaybe<Scalars['String']['input']>;
-  tag?: InputMaybe<Scalars['String']['input']>;
-  desc?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type PagesMutation = {
@@ -665,8 +644,7 @@ export type PagesMutation = {
   core_team?: InputMaybe<Array<InputMaybe<PagesCore_TeamMutation>>>;
   partnerships?: InputMaybe<Array<InputMaybe<PagesPartnershipsMutation>>>;
   programs_hero_title?: InputMaybe<Scalars['String']['input']>;
-  departments?: InputMaybe<Array<InputMaybe<PagesDepartmentsMutation>>>;
-  strategic_programs?: InputMaybe<Array<InputMaybe<PagesStrategic_ProgramsMutation>>>;
+  programs?: InputMaybe<Array<InputMaybe<PagesProgramsMutation>>>;
   courses_hero_title?: InputMaybe<Scalars['String']['input']>;
   beneficiaries_title?: InputMaybe<Scalars['String']['input']>;
   beneficiaries_text?: InputMaybe<Scalars['String']['input']>;
@@ -694,7 +672,7 @@ export type BlogsMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type PagesPartsFragment = { __typename: 'Pages', slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, departments?: Array<{ __typename: 'PagesDepartments', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null, strategic_programs?: Array<{ __typename: 'PagesStrategic_programs', title?: string | null, tag?: string | null, desc?: string | null } | null> | null };
+export type PagesPartsFragment = { __typename: 'Pages', slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, programs?: Array<{ __typename: 'PagesPrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null };
 
 export type SettingsPartsFragment = { __typename: 'Settings', primary_color?: string | null, email?: string | null, phone?: string | null, address?: string | null };
 
@@ -707,7 +685,7 @@ export type PagesQueryVariables = Exact<{
 }>;
 
 
-export type PagesQuery = { __typename?: 'Query', pages: { __typename: 'Pages', id: string, slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, departments?: Array<{ __typename: 'PagesDepartments', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null, strategic_programs?: Array<{ __typename: 'PagesStrategic_programs', title?: string | null, tag?: string | null, desc?: string | null } | null> | null } };
+export type PagesQuery = { __typename?: 'Query', pages: { __typename: 'Pages', id: string, slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, programs?: Array<{ __typename: 'PagesPrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null } };
 
 export type PagesConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -719,7 +697,7 @@ export type PagesConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PagesConnectionQuery = { __typename?: 'Query', pagesConnection: { __typename?: 'PagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PagesConnectionEdges', cursor: string, node?: { __typename: 'Pages', id: string, slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, departments?: Array<{ __typename: 'PagesDepartments', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null, strategic_programs?: Array<{ __typename: 'PagesStrategic_programs', title?: string | null, tag?: string | null, desc?: string | null } | null> | null } | null } | null> | null } };
+export type PagesConnectionQuery = { __typename?: 'Query', pagesConnection: { __typename?: 'PagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PagesConnectionEdges', cursor: string, node?: { __typename: 'Pages', id: string, slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, programs?: Array<{ __typename: 'PagesPrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null } | null } | null> | null } };
 
 export type SettingsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -821,19 +799,13 @@ export const PagesPartsFragmentDoc = gql`
     desc
   }
   programs_hero_title
-  departments {
+  programs {
     __typename
     id
     title
     icon
     short
     details
-  }
-  strategic_programs {
-    __typename
-    title
-    tag
-    desc
   }
   courses_hero_title
   beneficiaries_title

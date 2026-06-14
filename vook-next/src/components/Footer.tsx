@@ -41,7 +41,7 @@ export default function Footer({ settings }: { settings: any }) {
               <ul>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
-                <li><Link href="/programs">Operational Departments</Link></li>
+                <li><Link href="/programs">Programs</Link></li>
                 <li><Link href="/courses">Course Offerings</Link></li>
               </ul>
             </div>

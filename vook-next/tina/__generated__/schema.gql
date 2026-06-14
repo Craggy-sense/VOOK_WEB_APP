@@ -115,18 +115,12 @@ type PagesPartnerships {
   desc: String
 }
 
-type PagesDepartments {
+type PagesPrograms {
   id: String
   title: String
   icon: String
   short: String
   details: String
-}
-
-type PagesStrategic_programs {
-  title: String
-  tag: String
-  desc: String
 }
 
 type Pages implements Node & Document {
@@ -154,8 +148,7 @@ type Pages implements Node & Document {
   core_team: [PagesCore_team]
   partnerships: [PagesPartnerships]
   programs_hero_title: String
-  departments: [PagesDepartments]
-  strategic_programs: [PagesStrategic_programs]
+  programs: [PagesPrograms]
   courses_hero_title: String
   beneficiaries_title: String
   beneficiaries_text: String
@@ -197,18 +190,12 @@ input PagesPartnershipsFilter {
   desc: StringFilter
 }
 
-input PagesDepartmentsFilter {
+input PagesProgramsFilter {
   id: StringFilter
   title: StringFilter
   icon: StringFilter
   short: StringFilter
   details: StringFilter
-}
-
-input PagesStrategic_programsFilter {
-  title: StringFilter
-  tag: StringFilter
-  desc: StringFilter
 }
 
 input PagesFilter {
@@ -236,8 +223,7 @@ input PagesFilter {
   core_team: PagesCore_teamFilter
   partnerships: PagesPartnershipsFilter
   programs_hero_title: StringFilter
-  departments: PagesDepartmentsFilter
-  strategic_programs: PagesStrategic_programsFilter
+  programs: PagesProgramsFilter
   courses_hero_title: StringFilter
   beneficiaries_title: StringFilter
   beneficiaries_text: StringFilter
@@ -404,18 +390,12 @@ input PagesPartnershipsMutation {
   desc: String
 }
 
-input PagesDepartmentsMutation {
+input PagesProgramsMutation {
   id: String
   title: String
   icon: String
   short: String
   details: String
-}
-
-input PagesStrategic_programsMutation {
-  title: String
-  tag: String
-  desc: String
 }
 
 input PagesMutation {
@@ -443,8 +423,7 @@ input PagesMutation {
   core_team: [PagesCore_teamMutation]
   partnerships: [PagesPartnershipsMutation]
   programs_hero_title: String
-  departments: [PagesDepartmentsMutation]
-  strategic_programs: [PagesStrategic_programsMutation]
+  programs: [PagesProgramsMutation]
   courses_hero_title: String
   beneficiaries_title: String
   beneficiaries_text: String

@@ -92,7 +92,7 @@ export default function Header({ settings }: { settings: any }) {
 
               <li className="header-nav-item">
                 <Link href="/programs" className="header-nav-link" onClick={() => setIsMobileMenuOpen(false)}>
-                  Departments
+                  Programs
                 </Link>
               </li>
 

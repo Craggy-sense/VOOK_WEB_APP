@@ -4,7 +4,7 @@ import ProgramsPage from "./programs-page";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Departments & Programs | Vook Voice International",
+  title: "Programs | Vook Voice International",
 };
 
 export default async function Programs() {
