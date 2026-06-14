@@ -37,8 +37,7 @@ export default function ProgramsPage(props: any) {
         <div className="container">
           <ScrollReveal>
             <div className="section-title text-center">
-              <span className="subtitle">Our Structure</span>
-              <h2>Our Programs</h2>
+              <h2 style={{ color: "var(--accent-red)" }}>Our Programs</h2>
               <div className="title-underline center"></div>
             </div>
           </ScrollReveal>
