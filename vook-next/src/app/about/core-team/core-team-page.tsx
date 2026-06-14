@@ -40,8 +40,7 @@ export default function CoreTeamPage(props: any) {
         <div className="container">
           <ScrollReveal>
             <div className="section-title text-center">
-              <span className="subtitle">The Leadership</span>
-              <h2>Meet Our Team</h2>
+              <h2>Meet <span style={{ color: "var(--accent-red)" }}>Our Team</span></h2>
               <div className="title-underline center"></div>
               <p className="text-muted mt-4" style={{ maxWidth: "700px", margin: "0 auto" }}>
                 Click on any team member to view their full profile.
