@@ -50,28 +50,7 @@ export default function CommunityPage(props: any) {
             ))}
           </div>
 
-          {/* Legacy Partnerships (if any remain) */}
-          {page.partnerships && page.partnerships.length > 0 && (
-             <div className="mt-5">
-                <ScrollReveal>
-                  <div className="section-title mt-5">
-                    <h2>Additional Partnerships</h2>
-                    <div className="title-underline"></div>
-                  </div>
-                </ScrollReveal>
-                <div className="grid-3 mt-4">
-                  {page.partnerships.map((partner: any, index: number) => (
-                    <ScrollReveal delay={(index + 1) * 100} key={`partner-${index}`}>
-                      <div className="premium-executive-card" style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem", height: "100%" }} data-tina-field={tinaField(partner, "title")}>
-                        <i className={partner.icon || "fas fa-star"} style={{ fontSize: "2rem", color: "var(--primary-green)" }} data-tina-field={tinaField(partner, "icon")}></i>
-                        <h4 style={{ fontSize: "1.1rem", marginBottom: "0" }} data-tina-field={tinaField(partner, "title")}>{partner.title}</h4>
-                        <p className="text-muted" style={{ fontSize: "0.95rem" }} data-tina-field={tinaField(partner, "desc")}>{partner.desc}</p>
-                      </div>
-                    </ScrollReveal>
-                  ))}
-                </div>
-             </div>
-          )}
+
         </div>
       </section>
     </>
