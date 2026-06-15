@@ -102,7 +102,7 @@ export default function Header({ settings }: { settings: any }) {
                 </Link>
                 <ul className="header-dropdown-menu">
                   <li className="header-dropdown-item">
-                    <Link href="/courses/leadership" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Leadership and Governance</Link>
+                    <Link href="/courses/leadership" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Leadership</Link>
                   </li>
                   <li className="header-dropdown-item">
                     <Link href="/courses/peace-building" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Peace Building</Link>

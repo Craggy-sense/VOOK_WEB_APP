@@ -6,7 +6,7 @@ export type Course = {
 };
 
 export const allCourses: Course[] = [
-  // Leadership and Governance
+  // Leadership
   {
     title: "Level 1: Foundations of Leadership & Personal Development",
     category: "leadership",
@@ -68,7 +68,7 @@ export const allCourses: Course[] = [
 ];
 
 export const categoryTitles: Record<string, string> = {
-  leadership: "Leadership and Governance",
+  leadership: "Leadership",
   "peace-building": "Peace Building",
   governance: "Governance",
 };
