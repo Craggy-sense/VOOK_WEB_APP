@@ -514,7 +514,7 @@ i[class*="fa-"], .f-icon, .feature-icon, .icon { color: var(--accent-red) !impor
 }
 
 .slide-content .main-title {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(1.2rem, 6.5vw, 5rem);
     color: var(--accent-cream);
     margin-bottom: 0.5rem;
     line-height: 1.1;
@@ -542,6 +542,8 @@ i[class*="fa-"], .f-icon, .feature-icon, .icon { color: var(--accent-red) !impor
 .slide-actions {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .slider-btn {
