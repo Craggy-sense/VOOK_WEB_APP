@@ -7,8 +7,8 @@ const branch = "main";
 
 export default defineConfig({
   branch,
-  // clientId and token removed to allow local-only builds without a TinaCloud account.
-
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
+  token: process.env.TINA_TOKEN || "",
   build: {
     outputFolder: "admin",
     publicFolder: "public",
