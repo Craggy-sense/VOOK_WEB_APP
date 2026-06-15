@@ -3,7 +3,8 @@ import { defineConfig } from "tinacms";
 var branch = "main";
 var config_default = defineConfig({
   branch,
-  // clientId and token removed to allow local-only builds without a TinaCloud account.
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
+  token: process.env.TINA_TOKEN || "",
   build: {
     outputFolder: "admin",
     publicFolder: "public"
@@ -152,7 +153,7 @@ var config_default = defineConfig({
             name: "category",
             label: "Category",
             options: [
-              { label: "Leadership and Governance", value: "leadership" },
+              { label: "Leadership", value: "leadership" },
               { label: "Peace Building", value: "peace-building" },
               { label: "Governance", value: "governance" }
             ],

@@ -88,7 +88,7 @@ export default function CoreTeamPage(props: any) {
                 <div style={{ color: "var(--accent-red)", fontWeight: "600", fontSize: "1.1rem" }}>{selectedMember.title}</div>
               </div>
               <div className="team-modal-content-area">
-                <h2 className="team-modal-heading">About {selectedMember.name.split(' ')[0]}</h2>
+
                 <div className="team-modal-bio">
                   <p style={{ whiteSpace: "pre-wrap" }}>{selectedMember.bio || "Biography details coming soon."}</p>
                 </div>
