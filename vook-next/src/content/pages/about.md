@@ -1,30 +1,6 @@
 ---
-vision: 'To raise transformative leaders and empowered communities that positively influence society.'
+vision: To raise transformative leaders and empowered communities that positively influence society.
 mission: 'To equip individuals and organizations with the knowledge, skills, values, and leadership competencies needed to achieve personal excellence and sustainable societal transformation.'
-values: |
-  • Integrity
-  • Excellence
-  • Innovation
-  • Empowerment
-  • Collaboration
-  • Service
-what_we_do: |
-  We provide:
-  • Leadership development programs
-  • Personal development and life skills training
-  • Professional and career advancement courses
-  • Mentorship and coaching initiatives
-  • Research and knowledge-sharing forums
-  • Community empowerment and capacity-building programs
-  • Entrepreneurship and innovation training
-company_profile: 'Vook Voice International (VVI) is a leadership and capacity-building organization dedicated to empowering individuals, communities, and organizations through education, mentorship, training, and transformational development programs. We bring together learners, professionals, entrepreneurs, leaders, and change-makers committed to personal growth and societal impact.'
-our_impact: 'Through training, mentorship, and strategic partnerships, VVI nurtures leaders who drive positive change in their families, workplaces, communities, and nations.'
-why_choose_vvi: |
-  • Experienced trainers and facilitators
-  • Practical and transformative learning approaches
-  • Flexible learning opportunities
-  • Strong mentorship and networking platforms
-  • Commitment to personal and professional growth
 founder_name: Susan Kibii
 founder_title: Founder & Executive Director
 founder_image: /uploads/Susan-Kibii.jpeg
@@ -44,31 +20,18 @@ core_team:
     title: Founder & Executive Director
     initials: SK
     country: Kenya
-    image: /uploads/Susan-Kibii.jpeg
-    bio: 'Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation.'
   - name: Moses Osagiede
     title: Associate Trainer & Leadership Scholar
     initials: MO
     country: Kenya
-    image: /uploads/Moses-Osagiende.jpeg
-    bio: 'Moses Osagiede serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya.'
   - name: Dr. Jacqueline N. Mutua
     title: Associate Programme Leader
     initials: JM
     country: Kenya
-    image: /uploads/Dr-Jacqueline-Mutua.png
-    bio: |
-      Dr. Jacqueline N. Mutua is a lecturer, consultant, and researcher specializing in leadership, community strengthening, and child protection. Currently, she serves as the Associate Programme Leader for the Masters of Arts in Leadership Studies at the International Leadership University. In addition, she is a Senior Research Associate at Roots and Wings Research and Development Organization (RDO).
-      
-      Dr. Mutua holds a Doctor of Philosophy (PhD) in Leadership (Public Governance) from the International Leadership University (ILU). She has a Master's Degree in Sociology (Rural Sociology and Community Development - University of Nairobi), a Bachelor of Arts Degree in Anthropology (University of Nairobi), and a Diploma in Management of NGOs (Kenya Institute of Management).
-      
-      She possesses over twenty years of experience in project management and community health having worked with various nonprofit organizations (NGOs) including Amref, PATH, Save the Children and Jhpiego. Dr. Mutua believes in the potential of every human being and helps them define their God-given purpose (success), clarify their personal goals and overcome obstacles that stand between them and their destiny.
   - name: Jini Kingsley
-    title: PhD Candidate - Ghana
+    title: Leadership & Entrepreneurship
     initials: JK
-    country: Ghana
-    image: /uploads/kingsley-back.png
-    bio: 'Jini Kingsley is a dedicated researcher and leadership advocate focusing on sustainable development and ethical governance.'
+    country: Cameroon
 partnerships:
   - title: Corporate Partnerships
     icon: fas fa-building
@@ -88,21 +51,5 @@ partnerships:
   - title: Community Organizations
     icon: fas fa-hands-helping
     desc: 'Supporting community development through educational resources, skills training, and empowerment programs.'
-community_groups:
-  - title: Corporate
-    icon: fas fa-building
-    desc: 'Empowering organizations through customized leadership and professional development programs.'
-  - title: Partners
-    icon: fas fa-handshake
-    desc: 'Collaborating with industry leaders, academic institutions, and NGOs to maximize our impact.'
-  - title: Learners
-    icon: fas fa-user-graduate
-    desc: 'Equipping individuals with the knowledge and skills necessary to excel in their personal and professional lives.'
-  - title: Trainers
-    icon: fas fa-chalkboard-teacher
-    desc: 'A network of expert facilitators dedicated to delivering world-class educational experiences.'
-  - title: Individuals
-    icon: fas fa-user
-    desc: 'Fostering personal growth and transformation for individuals seeking to elevate their potential.'
 ---
 
