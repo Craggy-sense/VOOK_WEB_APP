@@ -2,7 +2,7 @@
 vision: To raise transformative leaders and empowered communities that positively influence society.
 mission: 'To equip individuals and organizations with the knowledge, skills, values, and leadership competencies needed to achieve personal excellence and sustainable societal transformation.'
 founder_name: Susan Kibii
-founder_title: LEADERSHIP DEVELOPMENT
+founder_title: Leadership Development
 founder_image: /uploads/Susan-Kibii.jpeg
 founder_bio: |2-
    Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation. She is passionate about empowering individuals and organizations through training, mentorship, and knowledge-sharing initiatives across corporate, academic, church, and community settings.
@@ -12,7 +12,7 @@ founder_bio: |2-
   She is the author of several books, including The Woman You Are Meant to Be and Woman in Pieces: Restoring the Dignity of Womanhood. Through her writing, teaching, and leadership engagements, Susan continues to inspire personal growth, ethical leadership, and positive social transformation.
 founder_quote: ' '
 moses_name: Moses Osagiede
-moses_title: CORPORATE GOVERNANCE
+moses_title: Corporate Governance
 moses_image: /uploads/Moses-Osagiende.jpeg
 moses_bio: ' Moses Osagiede is a graduate of Obafemi Awolowo University, Ife, Nigeria, and the International Graduate School of Leadership in Manila, Philippines. He serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya. He also leads the institution’s Leader-Transformation Department, which focuses on mentoring, coaching, and delivering value-based courses that help students integrate values with academic learning and translate them into productivity across various sectors of society. With a background in planning and transformational leadership, he is currently pursuing doctoral research on leadership adaptability, organizational culture, and government policies affecting younger employees in Kenya’s banking sector.'
 core_team:
@@ -25,7 +25,7 @@ core_team:
     initials: MO
     country: Kenya
   - name: Dr. Jacqueline N. Mutua
-    title: PUBLIC LEADERSHIP
+    title: Public Leadership
     initials: JM
     country: Kenya
   - name: Jini Kingsley
