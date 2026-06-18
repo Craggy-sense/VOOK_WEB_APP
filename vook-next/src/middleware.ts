@@ -2,6 +2,11 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
+  // Allow access in development mode so you can see changes locally
+  if (process.env.NODE_ENV === 'development') {
+    return NextResponse.next()
+  }
+
   // Allow access to the admin panel, API routes, and the coming-soon page itself
   if (request.nextUrl.pathname.startsWith('/admin') || 
       request.nextUrl.pathname.startsWith('/api') || 
