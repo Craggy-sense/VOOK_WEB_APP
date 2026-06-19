@@ -14,6 +14,17 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
+  // Check for a secret preview token in the URL or a cookie
+  if (request.nextUrl.searchParams.get('preview') === 'client') {
+    const response = NextResponse.next()
+    response.cookies.set('preview_mode', 'true', { path: '/' })
+    return response
+  }
+
+  if (request.cookies.get('preview_mode')?.value === 'true') {
+    return NextResponse.next()
+  }
+
   // Redirect all other traffic to the coming soon page
   return NextResponse.redirect(new URL('/coming-soon', request.url))
 }
