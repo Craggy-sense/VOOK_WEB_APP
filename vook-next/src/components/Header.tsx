@@ -113,22 +113,6 @@ export default function Header({ settings }: { settings: any }) {
                 </ul>
               </li>
 
-              <li className={`header-nav-item has-dropdown ${activeDropdown === "resources" ? "active" : ""}`}>
-                <Link href="#" className="header-nav-link" onClick={(e) => toggleDropdown(e, "resources")}>
-                  Resources <i className="fas fa-chevron-down dropdown-arrow"></i>
-                </Link>
-                <ul className="header-dropdown-menu">
-                  <li className="header-dropdown-item">
-                    <Link href="/resources/blogs" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Blogs & Learning Resources</Link>
-                  </li>
-                  <li className="header-dropdown-item">
-                    <Link href="/resources/vlogs" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Vlogs</Link>
-                  </li>
-                  <li className="header-dropdown-item">
-                    <Link href="/resources/pictures" className="header-dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>Pictures</Link>
-                  </li>
-                </ul>
-              </li>
 
             </ul>
 
