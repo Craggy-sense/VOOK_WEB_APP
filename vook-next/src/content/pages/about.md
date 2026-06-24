@@ -2,7 +2,7 @@
 vision: Knowledge made accessible to all
 mission: 'To create an inclusive platform that enables experts to share, and consumers to access, well-packaged knowledge and skills.'
 founder_name: Susan Kibii
-founder_title: Leadership Development
+founder_title: Organization development & personal leadership
 founder_image: /uploads/Susan-Kibii.jpeg
 founder_bio: |2-
    Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation. She is passionate about empowering individuals and organizations through training, mentorship, and knowledge-sharing initiatives across corporate, academic, church, and community settings.
@@ -17,19 +17,19 @@ moses_image: /uploads/Moses-Osagiende.jpeg
 moses_bio: ' Moses Osagiede is a graduate of Obafemi Awolowo University, Ife, Nigeria, and the International Graduate School of Leadership in Manila, Philippines. He serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya. He also leads the institution’s Leader-Transformation Department, which focuses on mentoring, coaching, and delivering value-based courses that help students integrate values with academic learning and translate them into productivity across various sectors of society. With a background in planning and transformational leadership, he is currently pursuing doctoral research on leadership adaptability, organizational culture, and government policies affecting younger employees in Kenya’s banking sector.'
 core_team:
   - name: Susan Kibii
-    title: Founder & Executive Director
+    title: Organization development & personal leadership
     initials: SK
     country: Kenya
   - name: Moses Osagiede
-    title: Associate Trainer & Leadership Scholar
+    title: Corporate governance
     initials: MO
     country: Kenya
   - name: Dr. Jacqueline N. Mutua
-    title: Public Leadership
+    title: Public leadership
     initials: JM
     country: Kenya
   - name: Jini Kingsley
-    title: Leadership & Entrepreneurship
+    title: Entrepreneurship & leadership
     initials: JK
     country: Cameroon
 partnerships:
