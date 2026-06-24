@@ -1,6 +1,30 @@
 ---
 vision: Knowledge made accessible to all
 mission: 'To create an inclusive platform that enables experts to share, and consumers to access, well-packaged knowledge and skills.'
+values: |
+  • Integrity
+  • Excellence
+  • Innovation
+  • Empowerment
+  • Collaboration
+  • Service
+what_we_do: |
+  We provide:
+  • Leadership development programs
+  • Personal development and life skills training
+  • Professional and career advancement courses
+  • Mentorship and coaching initiatives
+  • Research and knowledge-sharing forums
+  • Community empowerment and capacity-building programs
+  • Entrepreneurship and innovation training
+company_profile: 'Vook Voice International (VVI) is a leadership and capacity-building organization dedicated to empowering individuals, communities, and organizations through education, mentorship, training, and transformational development programs. We bring together learners, professionals, entrepreneurs, leaders, and change-makers committed to personal growth and societal impact.'
+our_impact: 'Through training, mentorship, and strategic partnerships, VVI nurtures leaders who drive positive change in their families, workplaces, communities, and nations.'
+why_choose_vvi: |
+  • Experienced trainers and facilitators
+  • Practical and transformative learning approaches
+  • Flexible learning opportunities
+  • Strong mentorship and networking platforms
+  • Commitment to personal and professional growth
 founder_name: Susan Kibii
 founder_title: Organization development & personal leadership
 founder_image: /uploads/Susan-Kibii.jpeg
