@@ -49,7 +49,7 @@ core_team:
     image: /uploads/Screenshot-2026-06-24-at-1.24.54-PM.png
     bio: 'Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation.'
   - name: Moses Osagiede
-    title: Corporate governance
+    title: Corporate Governance
     initials: MO
     country: Kenya
     image: /uploads/Moses-Osagiende.jpeg
