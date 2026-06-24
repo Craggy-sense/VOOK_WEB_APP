@@ -26,7 +26,7 @@ why_choose_vvi: |
   • Strong mentorship and networking platforms
   • Commitment to personal and professional growth
 founder_name: Susan Kibii
-founder_title: Organization Development & Personal Leadership
+founder_title: 'Organizational & Personal Leadership Development '
 founder_image: /uploads/Screenshot-2026-06-24-at-1.24.54-PM.png
 founder_bio: |-
   Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation. She is passionate about empowering individuals and organizations through training, mentorship, and knowledge-sharing initiatives across corporate, academic, church, and community settings.
