@@ -43,7 +43,7 @@ moses_bio: |2
   With a strong background in planning and transformational leadership, Moses Osagiede is currently pursuing doctoral research on leadership adaptability, organizational culture, and the impact of government policies on younger employees in Kenya’s banking sector. He is passionate about developing effective leaders and cultivating organizational cultures that foster growth, innovation, excellence, and sustainable transformation. Through his teaching, mentoring, and research, he seeks to equip individuals and organizations with the knowledge, values, and skills necessary to thrive in a rapidly changing world.
 core_team:
   - name: Susan Kibii
-    title: Organization development & personal leadership
+    title: Organization Leadership & Personal Development
     initials: SK
     country: Kenya
     image: /uploads/Screenshot-2026-06-24-at-1.24.54-PM.png
