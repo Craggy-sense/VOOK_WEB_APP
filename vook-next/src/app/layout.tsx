@@ -8,10 +8,10 @@ import path from "path";
 
 export const metadata: Metadata = {
   title: "Vook Voice International",
-  description: "Availing Knowledge to the People. A registered NGO in Kenya dedicated to empowerment, leadership training, and spiritual growth.",
+  description: "Generating, Packaging, and Sharing Knowledge for Transformation",
   openGraph: {
     title: "Vook Voice International",
-    description: "Availing Knowledge to the People. A registered NGO in Kenya dedicated to empowerment.",
+    description: "Generating, Packaging, and Sharing Knowledge for Transformation",
     url: "https://vookinternational.org",
     siteName: "Vook Voice International",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vook Voice International",
-    description: "Availing Knowledge to the People. A registered NGO in Kenya dedicated to empowerment.",
+    description: "Generating, Packaging, and Sharing Knowledge for Transformation",
     images: ["/Vook logo.png"],
   },
 };

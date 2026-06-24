@@ -8,24 +8,8 @@ export default function Footer({ settings }: { settings: any }) {
       <div className="footer-top">
         <div className="container row">
           <div className="col-5">
-            <div style={{ 
-              backgroundColor: 'var(--accent-cream)', 
-              padding: '12px 24px', 
-              borderRadius: '8px', 
-              display: 'inline-block', 
-              marginBottom: '1.5rem',
-              boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
-            }}>
-              <Image 
-                src="/Vook logo new.jpg" 
-                alt="Vook Voice International Logo" 
-                width={180} 
-                height={54} 
-                style={{ display: 'block', objectFit: 'contain' }}
-              />
-            </div>
-            <p className="mb-4">
-              Availing Knowledge to the People. A registered NGO in Kenya dedicated to empowerment, leadership training, and spiritual growth.
+            <p className="mb-4" style={{ fontSize: "1.2rem", fontWeight: "600", color: "var(--accent-cream)", lineHeight: "1.6", marginTop: "1rem" }}>
+              Generating, Packaging, and Sharing Knowledge for Transformation
             </p>
           </div>
           
