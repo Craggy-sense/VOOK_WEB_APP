@@ -61,7 +61,7 @@ core_team:
     image: /uploads/Screenshot-2026-06-24-at-2.25.11-PM.png
     bio: 'Dr. Jacqueline N. Mutua is a lecturer, consultant, and researcher specializing in leadership, community strengthening, and child protection.'
   - name: Jini Kingsley
-    title: Entrepreneurship & leadership
+    title: Entrepreneurship & Leadership
     initials: JK
     country: Cameroon
     image: /uploads/kingsley.jpg
