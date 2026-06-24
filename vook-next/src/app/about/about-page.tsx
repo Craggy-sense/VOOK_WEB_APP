@@ -96,12 +96,18 @@ export default function AboutPage(props: any) {
           <div className="grid-3 mt-5">
             {page.core_team && page.core_team.map((member: any, index: number) => (
               <ScrollReveal delay={(index + 1) * 100} key={index}>
-                <div className="premium-executive-card" data-tina-field={tinaField(member, "name")}>
-                  <div className="premium-avatar" data-tina-field={tinaField(member, "initials")}>{member.initials}</div>
+                <div className="premium-executive-card" style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem", height: "100%" }} data-tina-field={tinaField(member, "name")}>
+                  {member.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={member.image} alt={member.name} style={{ width: "80px", height: "80px", borderRadius: "50%", objectFit: "cover", boxShadow: "0 5px 15px rgba(0,0,0,0.1)" }} data-tina-field={tinaField(member, "image")} />
+                  ) : (
+                    <div className="premium-avatar" data-tina-field={tinaField(member, "initials")}>{member.initials}</div>
+                  )}
                   <div>
                     <h4 style={{ fontSize: "1.2rem", marginBottom: "0.2rem" }} data-tina-field={tinaField(member, "name")}>{member.name}</h4>
-                    <span className="text-muted" style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--primary-green)" }} data-tina-field={tinaField(member, "title")}>{member.title}</span>
+                    <span className="text-muted" style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--primary-green)", display: "block", marginBottom: "0.3rem" }} data-tina-field={tinaField(member, "title")}>{member.title}</span>
                     {member.country && <div style={{ fontSize: "0.8rem", color: "var(--text-light)" }} data-tina-field={tinaField(member, "country")}>{member.country}</div>}
+                    {member.bio && <p className="text-muted" style={{ fontSize: "0.9rem", marginTop: "0.8rem", lineHeight: "1.5" }} data-tina-field={tinaField(member, "bio")}>{member.bio}</p>}
                   </div>
                 </div>
               </ScrollReveal>

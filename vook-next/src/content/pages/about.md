@@ -44,18 +44,26 @@ core_team:
     title: Organization development & personal leadership
     initials: SK
     country: Kenya
+    image: /uploads/Susan-Kibii.jpeg
+    bio: 'Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation.'
   - name: Moses Osagiede
     title: Corporate governance
     initials: MO
     country: Kenya
+    image: /uploads/Moses-Osagiende.jpeg
+    bio: 'Moses Osagiede serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya.'
   - name: Dr. Jacqueline N. Mutua
     title: Public leadership
     initials: JM
     country: Kenya
+    image: /uploads/Dr-Jacqueline-Mutua.png
+    bio: 'Dr. Jacqueline N. Mutua is a lecturer, consultant, and researcher specializing in leadership, community strengthening, and child protection.'
   - name: Jini Kingsley
     title: Entrepreneurship & leadership
     initials: JK
     country: Cameroon
+    image: /uploads/kingsley.jpg
+    bio: 'Jini Kingsley is a dedicated researcher and leadership advocate focusing on sustainable development and ethical governance.'
 partnerships:
   - title: Corporate Partnerships
     icon: fas fa-building
