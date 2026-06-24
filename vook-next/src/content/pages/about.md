@@ -14,9 +14,9 @@ what_we_do: |
   • Personal development and life skills training
   • Professional and career advancement courses
   • Mentorship and coaching initiatives
-  • Research and knowledge-sharing forums
   • Community empowerment and capacity-building programs
   • Entrepreneurship and innovation training
+  • Research and knowledge-sharing forums
 company_profile: 'Vook Voice International (VVI) is a leadership and capacity-building organization dedicated to empowering individuals, communities, and organizations through education, mentorship, training, and transformational development programs. We bring together learners, professionals, entrepreneurs, leaders, and change-makers committed to personal growth and societal impact.'
 our_impact: 'Through training, mentorship, and strategic partnerships, VVI nurtures leaders who drive positive change in their families, workplaces, communities, and nations.'
 why_choose_vvi: |
