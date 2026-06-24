@@ -28,8 +28,8 @@ why_choose_vvi: |
 founder_name: Susan Kibii
 founder_title: Organization development & personal leadership
 founder_image: /uploads/Screenshot-2026-06-24-at-1.24.54-PM.png
-founder_bio: |2-
-   Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation. She is passionate about empowering individuals and organizations through training, mentorship, and knowledge-sharing initiatives across corporate, academic, church, and community settings.
+founder_bio: |-
+  Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation. She is passionate about empowering individuals and organizations through training, mentorship, and knowledge-sharing initiatives across corporate, academic, church, and community settings.
 
   Susan holds a Master of Arts in Leadership Studies (Organizational Development), a Bachelor of Arts in Journalism, and a Bachelor of Arts in Counselling. She also holds Diplomas in Theology, Professional Journalism, and Community Development, among other professional qualifications, and is currently pursuing a PhD in Leadership Studies with a specialization in Corporate Governance.
 
@@ -38,7 +38,7 @@ founder_quote: ' '
 moses_name: Moses Osagiede
 moses_title: Corporate Governance
 moses_image: /uploads/Moses-Osagiende.jpeg
-moses_bio: ' Moses Osagiede is a graduate of Obafemi Awolowo University, Ife, Nigeria, and the International Graduate School of Leadership in Manila, Philippines. He serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya. He also leads the institution’s Leader-Transformation Department, which focuses on mentoring, coaching, and delivering value-based courses that help students integrate values with academic learning and translate them into productivity across various sectors of society. With a background in planning and transformational leadership, he is currently pursuing doctoral research on leadership adaptability, organizational culture, and government policies affecting younger employees in Kenya’s banking sector.'
+moses_bio: 'Moses Osagiede is a graduate of Obafemi Awolowo University, Ife, Nigeria, and the International Graduate School of Leadership in Manila, Philippines. He serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya. He also leads the institution’s Leader-Transformation Department, which focuses on mentoring, coaching, and delivering value-based courses that help students integrate values with academic learning and translate them into productivity across various sectors of society. With a background in planning and transformational leadership, he is currently pursuing doctoral research on leadership adaptability, organizational culture, and government policies affecting younger employees in Kenya’s banking sector.'
 core_team:
   - name: Susan Kibii
     title: Organization development & personal leadership
@@ -56,7 +56,7 @@ core_team:
     title: Public leadership
     initials: JM
     country: Kenya
-    image: /uploads/Dr-Jacqueline-Mutua.png
+    image: /uploads/Screenshot-2026-06-24-at-2.25.11-PM.png
     bio: 'Dr. Jacqueline N. Mutua is a lecturer, consultant, and researcher specializing in leadership, community strengthening, and child protection.'
   - name: Jini Kingsley
     title: Entrepreneurship & leadership
