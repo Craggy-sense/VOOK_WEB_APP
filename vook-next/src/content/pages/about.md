@@ -1,6 +1,6 @@
 ---
-vision: To raise transformative leaders and empowered communities that positively influence society.
-mission: 'To equip individuals and organizations with the knowledge, skills, values, and leadership competencies needed to achieve personal excellence and sustainable societal transformation.'
+vision: Knowledge made accessible to all
+mission: 'To create an inclusive platform that enables experts to share, and consumers to access, well-packaged knowledge and skills.'
 founder_name: Susan Kibii
 founder_title: Leadership Development
 founder_image: /uploads/Susan-Kibii.jpeg

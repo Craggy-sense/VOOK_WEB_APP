@@ -13,9 +13,9 @@ mission: 'To create an inclusive platform that enables experts to share, and con
 feature_boxes:
   - title: Our Vision
     icon: fas fa-bullseye
-    desc: To be the premier knowledge hub for transformational leadership in Africa.
+    desc: Knowledge made accessible to all
   - title: Our Mission
     icon: fas fa-hands-helping
-    desc: Equipping individuals with the emotional and strategic tools to succeed.
+    desc: 'To create an inclusive platform that enables experts to share, and consumers to access, well-packaged knowledge and skills.'
 ---
 
