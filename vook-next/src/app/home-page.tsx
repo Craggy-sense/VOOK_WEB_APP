@@ -24,6 +24,7 @@ export default function HomePage(props: any) {
         <div className="container">
           <ScrollReveal>
             <div className="section-title text-center">
+              <span className="subtitle">July – September 2026</span>
               <h2>Ongoing Courses</h2>
               <div className="title-underline center"></div>
               <p className="text-muted mt-4" style={{ maxWidth: "700px", margin: "0 auto" }}>
