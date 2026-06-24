@@ -45,25 +45,39 @@ core_team:
     initials: SK
     country: Kenya
     image: /uploads/Screenshot-2026-06-24-at-1.24.54-PM.png
-    bio: 'Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation.'
+    bio: |
+      Susan Kibii is a leadership expert, communication consultant, lecturer, and author with extensive experience in leadership development and personal transformation. She is passionate about empowering individuals and organizations through training, mentorship, and knowledge-sharing initiatives across corporate, academic, church, and community settings.
+
+      Susan holds a Master of Arts in Leadership Studies (Organizational Development), a Bachelor of Arts in Journalism, and a Bachelor of Arts in Counselling. She also holds Diplomas in Theology, Professional Journalism, and Community Development, among other professional qualifications, and is currently pursuing a PhD in Leadership Studies with a specialization in Corporate Governance.
+
+      She is the author of several books, including The Woman You Are Meant to Be and Woman in Pieces: Restoring the Dignity of Womanhood. Through her writing, teaching, and leadership engagements, Susan continues to inspire personal growth, ethical leadership, and positive social transformation.
   - name: Moses Osagiede
     title: Corporate governance
     initials: MO
     country: Kenya
     image: /uploads/Moses-Osagiende.jpeg
-    bio: 'Moses Osagiede serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya.'
+    bio: |
+      Moses Osagiede is a graduate of Obafemi Awolowo University, Ife, Nigeria, and the International Graduate School of Leadership in Manila, Philippines. He serves as a faculty member in leadership and organizational culture at International Leadership University (ILU), Kenya. He also leads the institution’s Leader-Transformation Department, which focuses on mentoring, coaching, and delivering value-based courses that help students integrate values with academic learning and translate them into productivity across various sectors of society. With a background in planning and transformational leadership, he is currently pursuing doctoral research on leadership adaptability, organizational culture, and government policies affecting younger employees in Kenya’s banking sector.
   - name: Dr. Jacqueline N. Mutua
     title: Public leadership
     initials: JM
     country: Kenya
     image: /uploads/Screenshot-2026-06-24-at-2.25.11-PM.png
-    bio: 'Dr. Jacqueline N. Mutua is a lecturer, consultant, and researcher specializing in leadership, community strengthening, and child protection.'
+    bio: |
+      Dr. Jacqueline N. Mutua is a lecturer, consultant, and researcher specializing in leadership, community strengthening, and child protection. Currently, she serves as the Associate Programme Leader for the Masters of Arts in Leadership Studies at the International Leadership University. In addition, she is a Senior Research Associate at Roots and Wings Research and Development Organization (RDO).
+
+      Dr. Mutua holds a Doctor of Philosophy (PhD) in Leadership (Public Governance) from the International Leadership University (ILU). She has a Master's Degree in Sociology (Rural Sociology and Community Development - University of Nairobi), a Bachelor of Arts Degree in Anthropology (University of Nairobi), and a Diploma in Management of NGOs (Kenya Institute of Management).
+
+      She possesses over twenty years of experience in project management and community health having worked with various nonprofit organizations (NGOs) including Amref, PATH, Save the Children and Jhpiego. Dr. Mutua believes in the potential of every human being and helps them define their God-given purpose (success), clarify their personal goals and overcome obstacles that stand between them and their destiny.
   - name: Jini Kingsley
     title: Entrepreneurship & leadership
     initials: JK
     country: Cameroon
     image: /uploads/kingsley.jpg
-    bio: Jini Kingsley is a dedicated researcher and leadership advocate focusing on sustainable development and ethical governance.
+    bio: |
+      Jini Kingsley is a dedicated researcher, academic, and leadership advocate focusing on sustainable development, organizational growth, and ethical governance. He is a PhD candidate with a strong focus on research methodologies and strategic leadership systems.
+
+      At Vook Voice International, Kingsley contributes to program design and entrepreneurship initiatives, helping bridge academic research with practical business solutions. His work is driven by a passion for equipping upcoming leaders and entrepreneurs in Africa with the critical tools and insights needed to navigate modern organizational challenges.
 partnerships:
   - title: Corporate Partnerships
     icon: fas fa-building
