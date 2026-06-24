@@ -5,8 +5,8 @@ export function gql(strings, ...args) {
   });
   return str;
 }
-export const PagesPartsFragmentDoc = gql`
-    fragment PagesParts on Pages {
+export const Home_PagePartsFragmentDoc = gql`
+    fragment Home_pageParts on Home_page {
   __typename
   slide1_image
   slide1_title
@@ -19,17 +19,24 @@ export const PagesPartsFragmentDoc = gql`
   welcome_title
   vision
   mission
-  values
-  what_we_do
-  company_profile
-  our_impact
-  why_choose_vvi
   feature_boxes {
     __typename
     title
     icon
     desc
   }
+}
+    `;
+export const About_PagePartsFragmentDoc = gql`
+    fragment About_pageParts on About_page {
+  __typename
+  vision
+  mission
+  values
+  what_we_do
+  company_profile
+  our_impact
+  why_choose_vvi
   founder_name
   founder_title
   founder_image
@@ -60,6 +67,11 @@ export const PagesPartsFragmentDoc = gql`
     icon
     desc
   }
+}
+    `;
+export const Programs_PagePartsFragmentDoc = gql`
+    fragment Programs_pageParts on Programs_page {
+  __typename
   programs_hero_title
   programs {
     __typename
@@ -69,9 +81,6 @@ export const PagesPartsFragmentDoc = gql`
     short
     details
   }
-  courses_hero_title
-  beneficiaries_title
-  beneficiaries_text
 }
     `;
 export const SettingsPartsFragmentDoc = gql`
@@ -103,9 +112,9 @@ export const BlogsPartsFragmentDoc = gql`
   body
 }
     `;
-export const PagesDocument = gql`
-    query pages($relativePath: String!) {
-  pages(relativePath: $relativePath) {
+export const Home_PageDocument = gql`
+    query home_page($relativePath: String!) {
+  home_page(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -118,13 +127,13 @@ export const PagesDocument = gql`
       }
       id
     }
-    ...PagesParts
+    ...Home_pageParts
   }
 }
-    ${PagesPartsFragmentDoc}`;
-export const PagesConnectionDocument = gql`
-    query pagesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PagesFilter) {
-  pagesConnection(
+    ${Home_PagePartsFragmentDoc}`;
+export const Home_PageConnectionDocument = gql`
+    query home_pageConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Home_pageFilter) {
+  home_pageConnection(
     before: $before
     after: $after
     first: $first
@@ -154,12 +163,126 @@ export const PagesConnectionDocument = gql`
           }
           id
         }
-        ...PagesParts
+        ...Home_pageParts
       }
     }
   }
 }
-    ${PagesPartsFragmentDoc}`;
+    ${Home_PagePartsFragmentDoc}`;
+export const About_PageDocument = gql`
+    query about_page($relativePath: String!) {
+  about_page(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...About_pageParts
+  }
+}
+    ${About_PagePartsFragmentDoc}`;
+export const About_PageConnectionDocument = gql`
+    query about_pageConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: About_pageFilter) {
+  about_pageConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...About_pageParts
+      }
+    }
+  }
+}
+    ${About_PagePartsFragmentDoc}`;
+export const Programs_PageDocument = gql`
+    query programs_page($relativePath: String!) {
+  programs_page(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Programs_pageParts
+  }
+}
+    ${Programs_PagePartsFragmentDoc}`;
+export const Programs_PageConnectionDocument = gql`
+    query programs_pageConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Programs_pageFilter) {
+  programs_pageConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Programs_pageParts
+      }
+    }
+  }
+}
+    ${Programs_PagePartsFragmentDoc}`;
 export const SettingsDocument = gql`
     query settings($relativePath: String!) {
   settings(relativePath: $relativePath) {
@@ -333,11 +456,23 @@ export const BlogsConnectionDocument = gql`
     ${BlogsPartsFragmentDoc}`;
 export function getSdk(requester) {
   return {
-    pages(variables, options) {
-      return requester(PagesDocument, variables, options);
+    home_page(variables, options) {
+      return requester(Home_PageDocument, variables, options);
     },
-    pagesConnection(variables, options) {
-      return requester(PagesConnectionDocument, variables, options);
+    home_pageConnection(variables, options) {
+      return requester(Home_PageConnectionDocument, variables, options);
+    },
+    about_page(variables, options) {
+      return requester(About_PageDocument, variables, options);
+    },
+    about_pageConnection(variables, options) {
+      return requester(About_PageConnectionDocument, variables, options);
+    },
+    programs_page(variables, options) {
+      return requester(Programs_PageDocument, variables, options);
+    },
+    programs_pageConnection(variables, options) {
+      return requester(Programs_PageConnectionDocument, variables, options);
     },
     settings(variables, options) {
       return requester(SettingsDocument, variables, options);

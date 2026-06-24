@@ -1,4 +1,4 @@
-fragment PagesParts on Pages {
+fragment Home_pageParts on Home_page {
   __typename
   slide1_image
   slide1_title
@@ -11,17 +11,23 @@ fragment PagesParts on Pages {
   welcome_title
   vision
   mission
-  values
-  what_we_do
-  company_profile
-  our_impact
-  why_choose_vvi
   feature_boxes {
     __typename
     title
     icon
     desc
   }
+}
+
+fragment About_pageParts on About_page {
+  __typename
+  vision
+  mission
+  values
+  what_we_do
+  company_profile
+  our_impact
+  why_choose_vvi
   founder_name
   founder_title
   founder_image
@@ -52,6 +58,10 @@ fragment PagesParts on Pages {
     icon
     desc
   }
+}
+
+fragment Programs_pageParts on Programs_page {
+  __typename
   programs_hero_title
   programs {
     __typename
@@ -61,9 +71,6 @@ fragment PagesParts on Pages {
     short
     details
   }
-  courses_hero_title
-  beneficiaries_title
-  beneficiaries_text
 }
 
 fragment SettingsParts on Settings {

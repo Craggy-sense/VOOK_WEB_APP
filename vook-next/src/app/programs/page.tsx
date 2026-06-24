@@ -8,6 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Programs() {
-  const result = await client.queries.pages({ relativePath: "programs.md" });
+  const result = await client.queries.programs_page({ relativePath: "programs.md" });
   return <ProgramsPage {...result} />;
 }

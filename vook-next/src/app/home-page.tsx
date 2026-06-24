@@ -12,7 +12,7 @@ export default function HomePage(props: any) {
     data: props.data,
   });
 
-  const page = data.pages;
+  const page = data.home_page;
 
   return (
     <>

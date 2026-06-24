@@ -54,8 +54,12 @@ type Query {
   collections: [Collection!]!
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
-  pages(relativePath: String): Pages!
-  pagesConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PagesFilter): PagesConnection!
+  home_page(relativePath: String): Home_page!
+  home_pageConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Home_pageFilter): Home_pageConnection!
+  about_page(relativePath: String): About_page!
+  about_pageConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: About_pageFilter): About_pageConnection!
+  programs_page(relativePath: String): Programs_page!
+  programs_pageConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Programs_pageFilter): Programs_pageConnection!
   settings(relativePath: String): Settings!
   settingsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SettingsFilter): SettingsConnection!
   courses(relativePath: String): Courses!
@@ -65,7 +69,9 @@ type Query {
 }
 
 input DocumentFilter {
-  pages: PagesFilter
+  home_page: Home_pageFilter
+  about_page: About_pageFilter
+  programs_page: Programs_pageFilter
   settings: SettingsFilter
   courses: CoursesFilter
   blogs: BlogsFilter
@@ -94,44 +100,15 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Pages | Settings | Courses | Blogs | Folder
+union DocumentNode = Home_page | About_page | Programs_page | Settings | Courses | Blogs | Folder
 
-type PagesFeature_boxes {
+type Home_pageFeature_boxes {
   title: String
   icon: String
   desc: String
 }
 
-type PagesCore_team {
-  name: String
-  title: String
-  initials: String
-  country: String
-  image: String
-  bio: String
-}
-
-type PagesPartnerships {
-  title: String
-  icon: String
-  desc: String
-}
-
-type PagesCommunity_groups {
-  title: String
-  icon: String
-  desc: String
-}
-
-type PagesPrograms {
-  id: String
-  title: String
-  icon: String
-  short: String
-  details: String
-}
-
-type Pages implements Node & Document {
+type Home_page implements Node & Document {
   slide1_image: String
   slide1_title: String
   slide1_subtitle: String
@@ -143,29 +120,7 @@ type Pages implements Node & Document {
   welcome_title: String
   vision: String
   mission: String
-  values: String
-  what_we_do: String
-  company_profile: String
-  our_impact: String
-  why_choose_vvi: String
-  feature_boxes: [PagesFeature_boxes]
-  founder_name: String
-  founder_title: String
-  founder_image: String
-  founder_bio: String
-  founder_quote: String
-  moses_name: String
-  moses_title: String
-  moses_image: String
-  moses_bio: String
-  core_team: [PagesCore_team]
-  partnerships: [PagesPartnerships]
-  community_groups: [PagesCommunity_groups]
-  programs_hero_title: String
-  programs: [PagesPrograms]
-  courses_hero_title: String
-  beneficiaries_title: String
-  beneficiaries_text: String
+  feature_boxes: [Home_pageFeature_boxes]
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -185,42 +140,13 @@ input StringFilter {
   in: [String]
 }
 
-input PagesFeature_boxesFilter {
+input Home_pageFeature_boxesFilter {
   title: StringFilter
   icon: StringFilter
   desc: StringFilter
 }
 
-input PagesCore_teamFilter {
-  name: StringFilter
-  title: StringFilter
-  initials: StringFilter
-  country: StringFilter
-  image: ImageFilter
-  bio: StringFilter
-}
-
-input PagesPartnershipsFilter {
-  title: StringFilter
-  icon: StringFilter
-  desc: StringFilter
-}
-
-input PagesCommunity_groupsFilter {
-  title: StringFilter
-  icon: StringFilter
-  desc: StringFilter
-}
-
-input PagesProgramsFilter {
-  id: StringFilter
-  title: StringFilter
-  icon: StringFilter
-  short: StringFilter
-  details: StringFilter
-}
-
-input PagesFilter {
+input Home_pageFilter {
   slide1_image: ImageFilter
   slide1_title: StringFilter
   slide1_subtitle: StringFilter
@@ -232,12 +158,95 @@ input PagesFilter {
   welcome_title: StringFilter
   vision: StringFilter
   mission: StringFilter
+  feature_boxes: Home_pageFeature_boxesFilter
+}
+
+type Home_pageConnectionEdges {
+  cursor: String!
+  node: Home_page
+}
+
+type Home_pageConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Home_pageConnectionEdges]
+}
+
+type About_pageCore_team {
+  name: String
+  title: String
+  initials: String
+  country: String
+  image: String
+  bio: String
+}
+
+type About_pagePartnerships {
+  title: String
+  icon: String
+  desc: String
+}
+
+type About_pageCommunity_groups {
+  title: String
+  icon: String
+  desc: String
+}
+
+type About_page implements Node & Document {
+  vision: String
+  mission: String
+  values: String
+  what_we_do: String
+  company_profile: String
+  our_impact: String
+  why_choose_vvi: String
+  founder_name: String
+  founder_title: String
+  founder_image: String
+  founder_bio: String
+  founder_quote: String
+  moses_name: String
+  moses_title: String
+  moses_image: String
+  moses_bio: String
+  core_team: [About_pageCore_team]
+  partnerships: [About_pagePartnerships]
+  community_groups: [About_pageCommunity_groups]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input About_pageCore_teamFilter {
+  name: StringFilter
+  title: StringFilter
+  initials: StringFilter
+  country: StringFilter
+  image: ImageFilter
+  bio: StringFilter
+}
+
+input About_pagePartnershipsFilter {
+  title: StringFilter
+  icon: StringFilter
+  desc: StringFilter
+}
+
+input About_pageCommunity_groupsFilter {
+  title: StringFilter
+  icon: StringFilter
+  desc: StringFilter
+}
+
+input About_pageFilter {
+  vision: StringFilter
+  mission: StringFilter
   values: StringFilter
   what_we_do: StringFilter
   company_profile: StringFilter
   our_impact: StringFilter
   why_choose_vvi: StringFilter
-  feature_boxes: PagesFeature_boxesFilter
   founder_name: StringFilter
   founder_title: StringFilter
   founder_image: ImageFilter
@@ -247,25 +256,60 @@ input PagesFilter {
   moses_title: StringFilter
   moses_image: ImageFilter
   moses_bio: StringFilter
-  core_team: PagesCore_teamFilter
-  partnerships: PagesPartnershipsFilter
-  community_groups: PagesCommunity_groupsFilter
-  programs_hero_title: StringFilter
-  programs: PagesProgramsFilter
-  courses_hero_title: StringFilter
-  beneficiaries_title: StringFilter
-  beneficiaries_text: StringFilter
+  core_team: About_pageCore_teamFilter
+  partnerships: About_pagePartnershipsFilter
+  community_groups: About_pageCommunity_groupsFilter
 }
 
-type PagesConnectionEdges {
+type About_pageConnectionEdges {
   cursor: String!
-  node: Pages
+  node: About_page
 }
 
-type PagesConnection implements Connection {
+type About_pageConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
-  edges: [PagesConnectionEdges]
+  edges: [About_pageConnectionEdges]
+}
+
+type Programs_pagePrograms {
+  id: String
+  title: String
+  icon: String
+  short: String
+  details: String
+}
+
+type Programs_page implements Node & Document {
+  programs_hero_title: String
+  programs: [Programs_pagePrograms]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input Programs_pageProgramsFilter {
+  id: StringFilter
+  title: StringFilter
+  icon: StringFilter
+  short: StringFilter
+  details: StringFilter
+}
+
+input Programs_pageFilter {
+  programs_hero_title: StringFilter
+  programs: Programs_pageProgramsFilter
+}
+
+type Programs_pageConnectionEdges {
+  cursor: String!
+  node: Programs_page
+}
+
+type Programs_pageConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Programs_pageConnectionEdges]
 }
 
 type Settings implements Node & Document {
@@ -376,8 +420,12 @@ type Mutation {
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createFolder(collection: String, relativePath: String!): DocumentNode!
-  updatePages(relativePath: String!, params: PagesMutation!): Pages!
-  createPages(relativePath: String!, params: PagesMutation!): Pages!
+  updateHome_page(relativePath: String!, params: Home_pageMutation!): Home_page!
+  createHome_page(relativePath: String!, params: Home_pageMutation!): Home_page!
+  updateAbout_page(relativePath: String!, params: About_pageMutation!): About_page!
+  createAbout_page(relativePath: String!, params: About_pageMutation!): About_page!
+  updatePrograms_page(relativePath: String!, params: Programs_pageMutation!): Programs_page!
+  createPrograms_page(relativePath: String!, params: Programs_pageMutation!): Programs_page!
   updateSettings(relativePath: String!, params: SettingsMutation!): Settings!
   createSettings(relativePath: String!, params: SettingsMutation!): Settings!
   updateCourses(relativePath: String!, params: CoursesMutation!): Courses!
@@ -387,7 +435,9 @@ type Mutation {
 }
 
 input DocumentUpdateMutation {
-  pages: PagesMutation
+  home_page: Home_pageMutation
+  about_page: About_pageMutation
+  programs_page: Programs_pageMutation
   settings: SettingsMutation
   courses: CoursesMutation
   blogs: BlogsMutation
@@ -395,48 +445,21 @@ input DocumentUpdateMutation {
 }
 
 input DocumentMutation {
-  pages: PagesMutation
+  home_page: Home_pageMutation
+  about_page: About_pageMutation
+  programs_page: Programs_pageMutation
   settings: SettingsMutation
   courses: CoursesMutation
   blogs: BlogsMutation
 }
 
-input PagesFeature_boxesMutation {
+input Home_pageFeature_boxesMutation {
   title: String
   icon: String
   desc: String
 }
 
-input PagesCore_teamMutation {
-  name: String
-  title: String
-  initials: String
-  country: String
-  image: String
-  bio: String
-}
-
-input PagesPartnershipsMutation {
-  title: String
-  icon: String
-  desc: String
-}
-
-input PagesCommunity_groupsMutation {
-  title: String
-  icon: String
-  desc: String
-}
-
-input PagesProgramsMutation {
-  id: String
-  title: String
-  icon: String
-  short: String
-  details: String
-}
-
-input PagesMutation {
+input Home_pageMutation {
   slide1_image: String
   slide1_title: String
   slide1_subtitle: String
@@ -448,12 +471,38 @@ input PagesMutation {
   welcome_title: String
   vision: String
   mission: String
+  feature_boxes: [Home_pageFeature_boxesMutation]
+}
+
+input About_pageCore_teamMutation {
+  name: String
+  title: String
+  initials: String
+  country: String
+  image: String
+  bio: String
+}
+
+input About_pagePartnershipsMutation {
+  title: String
+  icon: String
+  desc: String
+}
+
+input About_pageCommunity_groupsMutation {
+  title: String
+  icon: String
+  desc: String
+}
+
+input About_pageMutation {
+  vision: String
+  mission: String
   values: String
   what_we_do: String
   company_profile: String
   our_impact: String
   why_choose_vvi: String
-  feature_boxes: [PagesFeature_boxesMutation]
   founder_name: String
   founder_title: String
   founder_image: String
@@ -463,14 +512,22 @@ input PagesMutation {
   moses_title: String
   moses_image: String
   moses_bio: String
-  core_team: [PagesCore_teamMutation]
-  partnerships: [PagesPartnershipsMutation]
-  community_groups: [PagesCommunity_groupsMutation]
+  core_team: [About_pageCore_teamMutation]
+  partnerships: [About_pagePartnershipsMutation]
+  community_groups: [About_pageCommunity_groupsMutation]
+}
+
+input Programs_pageProgramsMutation {
+  id: String
+  title: String
+  icon: String
+  short: String
+  details: String
+}
+
+input Programs_pageMutation {
   programs_hero_title: String
-  programs: [PagesProgramsMutation]
-  courses_hero_title: String
-  beneficiaries_title: String
-  beneficiaries_text: String
+  programs: [Programs_pageProgramsMutation]
 }
 
 input SettingsMutation {

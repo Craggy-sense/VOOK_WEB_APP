@@ -82,8 +82,12 @@ export type Query = {
   collections: Array<Collection>;
   node: Node;
   document: DocumentNode;
-  pages: Pages;
-  pagesConnection: PagesConnection;
+  home_page: Home_Page;
+  home_pageConnection: Home_PageConnection;
+  about_page: About_Page;
+  about_pageConnection: About_PageConnection;
+  programs_page: Programs_Page;
+  programs_pageConnection: Programs_PageConnection;
   settings: Settings;
   settingsConnection: SettingsConnection;
   courses: Courses;
@@ -114,18 +118,48 @@ export type QueryDocumentArgs = {
 };
 
 
-export type QueryPagesArgs = {
+export type QueryHome_PageArgs = {
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-export type QueryPagesConnectionArgs = {
+export type QueryHome_PageConnectionArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<PagesFilter>;
+  filter?: InputMaybe<Home_PageFilter>;
+};
+
+
+export type QueryAbout_PageArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryAbout_PageConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<About_PageFilter>;
+};
+
+
+export type QueryPrograms_PageArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryPrograms_PageConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<Programs_PageFilter>;
 };
 
 
@@ -174,7 +208,9 @@ export type QueryBlogsConnectionArgs = {
 };
 
 export type DocumentFilter = {
-  pages?: InputMaybe<PagesFilter>;
+  home_page?: InputMaybe<Home_PageFilter>;
+  about_page?: InputMaybe<About_PageFilter>;
+  programs_page?: InputMaybe<Programs_PageFilter>;
   settings?: InputMaybe<SettingsFilter>;
   courses?: InputMaybe<CoursesFilter>;
   blogs?: InputMaybe<BlogsFilter>;
@@ -217,50 +253,17 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Pages | Settings | Courses | Blogs | Folder;
+export type DocumentNode = Home_Page | About_Page | Programs_Page | Settings | Courses | Blogs | Folder;
 
-export type PagesFeature_Boxes = {
-  __typename?: 'PagesFeature_boxes';
+export type Home_PageFeature_Boxes = {
+  __typename?: 'Home_pageFeature_boxes';
   title?: Maybe<Scalars['String']['output']>;
   icon?: Maybe<Scalars['String']['output']>;
   desc?: Maybe<Scalars['String']['output']>;
 };
 
-export type PagesCore_Team = {
-  __typename?: 'PagesCore_team';
-  name?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  initials?: Maybe<Scalars['String']['output']>;
-  country?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
-  bio?: Maybe<Scalars['String']['output']>;
-};
-
-export type PagesPartnerships = {
-  __typename?: 'PagesPartnerships';
-  title?: Maybe<Scalars['String']['output']>;
-  icon?: Maybe<Scalars['String']['output']>;
-  desc?: Maybe<Scalars['String']['output']>;
-};
-
-export type PagesCommunity_Groups = {
-  __typename?: 'PagesCommunity_groups';
-  title?: Maybe<Scalars['String']['output']>;
-  icon?: Maybe<Scalars['String']['output']>;
-  desc?: Maybe<Scalars['String']['output']>;
-};
-
-export type PagesPrograms = {
-  __typename?: 'PagesPrograms';
-  id?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  icon?: Maybe<Scalars['String']['output']>;
-  short?: Maybe<Scalars['String']['output']>;
-  details?: Maybe<Scalars['String']['output']>;
-};
-
-export type Pages = Node & Document & {
-  __typename?: 'Pages';
+export type Home_Page = Node & Document & {
+  __typename?: 'Home_page';
   slide1_image?: Maybe<Scalars['String']['output']>;
   slide1_title?: Maybe<Scalars['String']['output']>;
   slide1_subtitle?: Maybe<Scalars['String']['output']>;
@@ -272,29 +275,7 @@ export type Pages = Node & Document & {
   welcome_title?: Maybe<Scalars['String']['output']>;
   vision?: Maybe<Scalars['String']['output']>;
   mission?: Maybe<Scalars['String']['output']>;
-  values?: Maybe<Scalars['String']['output']>;
-  what_we_do?: Maybe<Scalars['String']['output']>;
-  company_profile?: Maybe<Scalars['String']['output']>;
-  our_impact?: Maybe<Scalars['String']['output']>;
-  why_choose_vvi?: Maybe<Scalars['String']['output']>;
-  feature_boxes?: Maybe<Array<Maybe<PagesFeature_Boxes>>>;
-  founder_name?: Maybe<Scalars['String']['output']>;
-  founder_title?: Maybe<Scalars['String']['output']>;
-  founder_image?: Maybe<Scalars['String']['output']>;
-  founder_bio?: Maybe<Scalars['String']['output']>;
-  founder_quote?: Maybe<Scalars['String']['output']>;
-  moses_name?: Maybe<Scalars['String']['output']>;
-  moses_title?: Maybe<Scalars['String']['output']>;
-  moses_image?: Maybe<Scalars['String']['output']>;
-  moses_bio?: Maybe<Scalars['String']['output']>;
-  core_team?: Maybe<Array<Maybe<PagesCore_Team>>>;
-  partnerships?: Maybe<Array<Maybe<PagesPartnerships>>>;
-  community_groups?: Maybe<Array<Maybe<PagesCommunity_Groups>>>;
-  programs_hero_title?: Maybe<Scalars['String']['output']>;
-  programs?: Maybe<Array<Maybe<PagesPrograms>>>;
-  courses_hero_title?: Maybe<Scalars['String']['output']>;
-  beneficiaries_title?: Maybe<Scalars['String']['output']>;
-  beneficiaries_text?: Maybe<Scalars['String']['output']>;
+  feature_boxes?: Maybe<Array<Maybe<Home_PageFeature_Boxes>>>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -314,42 +295,13 @@ export type StringFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type PagesFeature_BoxesFilter = {
+export type Home_PageFeature_BoxesFilter = {
   title?: InputMaybe<StringFilter>;
   icon?: InputMaybe<StringFilter>;
   desc?: InputMaybe<StringFilter>;
 };
 
-export type PagesCore_TeamFilter = {
-  name?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-  initials?: InputMaybe<StringFilter>;
-  country?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
-  bio?: InputMaybe<StringFilter>;
-};
-
-export type PagesPartnershipsFilter = {
-  title?: InputMaybe<StringFilter>;
-  icon?: InputMaybe<StringFilter>;
-  desc?: InputMaybe<StringFilter>;
-};
-
-export type PagesCommunity_GroupsFilter = {
-  title?: InputMaybe<StringFilter>;
-  icon?: InputMaybe<StringFilter>;
-  desc?: InputMaybe<StringFilter>;
-};
-
-export type PagesProgramsFilter = {
-  id?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-  icon?: InputMaybe<StringFilter>;
-  short?: InputMaybe<StringFilter>;
-  details?: InputMaybe<StringFilter>;
-};
-
-export type PagesFilter = {
+export type Home_PageFilter = {
   slide1_image?: InputMaybe<ImageFilter>;
   slide1_title?: InputMaybe<StringFilter>;
   slide1_subtitle?: InputMaybe<StringFilter>;
@@ -361,12 +313,101 @@ export type PagesFilter = {
   welcome_title?: InputMaybe<StringFilter>;
   vision?: InputMaybe<StringFilter>;
   mission?: InputMaybe<StringFilter>;
+  feature_boxes?: InputMaybe<Home_PageFeature_BoxesFilter>;
+};
+
+export type Home_PageConnectionEdges = {
+  __typename?: 'Home_pageConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Home_Page>;
+};
+
+export type Home_PageConnection = Connection & {
+  __typename?: 'Home_pageConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<Home_PageConnectionEdges>>>;
+};
+
+export type About_PageCore_Team = {
+  __typename?: 'About_pageCore_team';
+  name?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  initials?: Maybe<Scalars['String']['output']>;
+  country?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  bio?: Maybe<Scalars['String']['output']>;
+};
+
+export type About_PagePartnerships = {
+  __typename?: 'About_pagePartnerships';
+  title?: Maybe<Scalars['String']['output']>;
+  icon?: Maybe<Scalars['String']['output']>;
+  desc?: Maybe<Scalars['String']['output']>;
+};
+
+export type About_PageCommunity_Groups = {
+  __typename?: 'About_pageCommunity_groups';
+  title?: Maybe<Scalars['String']['output']>;
+  icon?: Maybe<Scalars['String']['output']>;
+  desc?: Maybe<Scalars['String']['output']>;
+};
+
+export type About_Page = Node & Document & {
+  __typename?: 'About_page';
+  vision?: Maybe<Scalars['String']['output']>;
+  mission?: Maybe<Scalars['String']['output']>;
+  values?: Maybe<Scalars['String']['output']>;
+  what_we_do?: Maybe<Scalars['String']['output']>;
+  company_profile?: Maybe<Scalars['String']['output']>;
+  our_impact?: Maybe<Scalars['String']['output']>;
+  why_choose_vvi?: Maybe<Scalars['String']['output']>;
+  founder_name?: Maybe<Scalars['String']['output']>;
+  founder_title?: Maybe<Scalars['String']['output']>;
+  founder_image?: Maybe<Scalars['String']['output']>;
+  founder_bio?: Maybe<Scalars['String']['output']>;
+  founder_quote?: Maybe<Scalars['String']['output']>;
+  moses_name?: Maybe<Scalars['String']['output']>;
+  moses_title?: Maybe<Scalars['String']['output']>;
+  moses_image?: Maybe<Scalars['String']['output']>;
+  moses_bio?: Maybe<Scalars['String']['output']>;
+  core_team?: Maybe<Array<Maybe<About_PageCore_Team>>>;
+  partnerships?: Maybe<Array<Maybe<About_PagePartnerships>>>;
+  community_groups?: Maybe<Array<Maybe<About_PageCommunity_Groups>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type About_PageCore_TeamFilter = {
+  name?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  initials?: InputMaybe<StringFilter>;
+  country?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  bio?: InputMaybe<StringFilter>;
+};
+
+export type About_PagePartnershipsFilter = {
+  title?: InputMaybe<StringFilter>;
+  icon?: InputMaybe<StringFilter>;
+  desc?: InputMaybe<StringFilter>;
+};
+
+export type About_PageCommunity_GroupsFilter = {
+  title?: InputMaybe<StringFilter>;
+  icon?: InputMaybe<StringFilter>;
+  desc?: InputMaybe<StringFilter>;
+};
+
+export type About_PageFilter = {
+  vision?: InputMaybe<StringFilter>;
+  mission?: InputMaybe<StringFilter>;
   values?: InputMaybe<StringFilter>;
   what_we_do?: InputMaybe<StringFilter>;
   company_profile?: InputMaybe<StringFilter>;
   our_impact?: InputMaybe<StringFilter>;
   why_choose_vvi?: InputMaybe<StringFilter>;
-  feature_boxes?: InputMaybe<PagesFeature_BoxesFilter>;
   founder_name?: InputMaybe<StringFilter>;
   founder_title?: InputMaybe<StringFilter>;
   founder_image?: InputMaybe<ImageFilter>;
@@ -376,27 +417,66 @@ export type PagesFilter = {
   moses_title?: InputMaybe<StringFilter>;
   moses_image?: InputMaybe<ImageFilter>;
   moses_bio?: InputMaybe<StringFilter>;
-  core_team?: InputMaybe<PagesCore_TeamFilter>;
-  partnerships?: InputMaybe<PagesPartnershipsFilter>;
-  community_groups?: InputMaybe<PagesCommunity_GroupsFilter>;
-  programs_hero_title?: InputMaybe<StringFilter>;
-  programs?: InputMaybe<PagesProgramsFilter>;
-  courses_hero_title?: InputMaybe<StringFilter>;
-  beneficiaries_title?: InputMaybe<StringFilter>;
-  beneficiaries_text?: InputMaybe<StringFilter>;
+  core_team?: InputMaybe<About_PageCore_TeamFilter>;
+  partnerships?: InputMaybe<About_PagePartnershipsFilter>;
+  community_groups?: InputMaybe<About_PageCommunity_GroupsFilter>;
 };
 
-export type PagesConnectionEdges = {
-  __typename?: 'PagesConnectionEdges';
+export type About_PageConnectionEdges = {
+  __typename?: 'About_pageConnectionEdges';
   cursor: Scalars['String']['output'];
-  node?: Maybe<Pages>;
+  node?: Maybe<About_Page>;
 };
 
-export type PagesConnection = Connection & {
-  __typename?: 'PagesConnection';
+export type About_PageConnection = Connection & {
+  __typename?: 'About_pageConnection';
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<PagesConnectionEdges>>>;
+  edges?: Maybe<Array<Maybe<About_PageConnectionEdges>>>;
+};
+
+export type Programs_PagePrograms = {
+  __typename?: 'Programs_pagePrograms';
+  id?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  icon?: Maybe<Scalars['String']['output']>;
+  short?: Maybe<Scalars['String']['output']>;
+  details?: Maybe<Scalars['String']['output']>;
+};
+
+export type Programs_Page = Node & Document & {
+  __typename?: 'Programs_page';
+  programs_hero_title?: Maybe<Scalars['String']['output']>;
+  programs?: Maybe<Array<Maybe<Programs_PagePrograms>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type Programs_PageProgramsFilter = {
+  id?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  icon?: InputMaybe<StringFilter>;
+  short?: InputMaybe<StringFilter>;
+  details?: InputMaybe<StringFilter>;
+};
+
+export type Programs_PageFilter = {
+  programs_hero_title?: InputMaybe<StringFilter>;
+  programs?: InputMaybe<Programs_PageProgramsFilter>;
+};
+
+export type Programs_PageConnectionEdges = {
+  __typename?: 'Programs_pageConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Programs_Page>;
+};
+
+export type Programs_PageConnection = Connection & {
+  __typename?: 'Programs_pageConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<Programs_PageConnectionEdges>>>;
 };
 
 export type Settings = Node & Document & {
@@ -517,8 +597,12 @@ export type Mutation = {
   deleteDocument: DocumentNode;
   createDocument: DocumentNode;
   createFolder: DocumentNode;
-  updatePages: Pages;
-  createPages: Pages;
+  updateHome_page: Home_Page;
+  createHome_page: Home_Page;
+  updateAbout_page: About_Page;
+  createAbout_page: About_Page;
+  updatePrograms_page: Programs_Page;
+  createPrograms_page: Programs_Page;
   updateSettings: Settings;
   createSettings: Settings;
   updateCourses: Courses;
@@ -561,15 +645,39 @@ export type MutationCreateFolderArgs = {
 };
 
 
-export type MutationUpdatePagesArgs = {
+export type MutationUpdateHome_PageArgs = {
   relativePath: Scalars['String']['input'];
-  params: PagesMutation;
+  params: Home_PageMutation;
 };
 
 
-export type MutationCreatePagesArgs = {
+export type MutationCreateHome_PageArgs = {
   relativePath: Scalars['String']['input'];
-  params: PagesMutation;
+  params: Home_PageMutation;
+};
+
+
+export type MutationUpdateAbout_PageArgs = {
+  relativePath: Scalars['String']['input'];
+  params: About_PageMutation;
+};
+
+
+export type MutationCreateAbout_PageArgs = {
+  relativePath: Scalars['String']['input'];
+  params: About_PageMutation;
+};
+
+
+export type MutationUpdatePrograms_PageArgs = {
+  relativePath: Scalars['String']['input'];
+  params: Programs_PageMutation;
+};
+
+
+export type MutationCreatePrograms_PageArgs = {
+  relativePath: Scalars['String']['input'];
+  params: Programs_PageMutation;
 };
 
 
@@ -609,7 +717,9 @@ export type MutationCreateBlogsArgs = {
 };
 
 export type DocumentUpdateMutation = {
-  pages?: InputMaybe<PagesMutation>;
+  home_page?: InputMaybe<Home_PageMutation>;
+  about_page?: InputMaybe<About_PageMutation>;
+  programs_page?: InputMaybe<Programs_PageMutation>;
   settings?: InputMaybe<SettingsMutation>;
   courses?: InputMaybe<CoursesMutation>;
   blogs?: InputMaybe<BlogsMutation>;
@@ -617,48 +727,21 @@ export type DocumentUpdateMutation = {
 };
 
 export type DocumentMutation = {
-  pages?: InputMaybe<PagesMutation>;
+  home_page?: InputMaybe<Home_PageMutation>;
+  about_page?: InputMaybe<About_PageMutation>;
+  programs_page?: InputMaybe<Programs_PageMutation>;
   settings?: InputMaybe<SettingsMutation>;
   courses?: InputMaybe<CoursesMutation>;
   blogs?: InputMaybe<BlogsMutation>;
 };
 
-export type PagesFeature_BoxesMutation = {
+export type Home_PageFeature_BoxesMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   icon?: InputMaybe<Scalars['String']['input']>;
   desc?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type PagesCore_TeamMutation = {
-  name?: InputMaybe<Scalars['String']['input']>;
-  title?: InputMaybe<Scalars['String']['input']>;
-  initials?: InputMaybe<Scalars['String']['input']>;
-  country?: InputMaybe<Scalars['String']['input']>;
-  image?: InputMaybe<Scalars['String']['input']>;
-  bio?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type PagesPartnershipsMutation = {
-  title?: InputMaybe<Scalars['String']['input']>;
-  icon?: InputMaybe<Scalars['String']['input']>;
-  desc?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type PagesCommunity_GroupsMutation = {
-  title?: InputMaybe<Scalars['String']['input']>;
-  icon?: InputMaybe<Scalars['String']['input']>;
-  desc?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type PagesProgramsMutation = {
-  id?: InputMaybe<Scalars['String']['input']>;
-  title?: InputMaybe<Scalars['String']['input']>;
-  icon?: InputMaybe<Scalars['String']['input']>;
-  short?: InputMaybe<Scalars['String']['input']>;
-  details?: InputMaybe<Scalars['String']['input']>;
-};
-
-export type PagesMutation = {
+export type Home_PageMutation = {
   slide1_image?: InputMaybe<Scalars['String']['input']>;
   slide1_title?: InputMaybe<Scalars['String']['input']>;
   slide1_subtitle?: InputMaybe<Scalars['String']['input']>;
@@ -670,12 +753,38 @@ export type PagesMutation = {
   welcome_title?: InputMaybe<Scalars['String']['input']>;
   vision?: InputMaybe<Scalars['String']['input']>;
   mission?: InputMaybe<Scalars['String']['input']>;
+  feature_boxes?: InputMaybe<Array<InputMaybe<Home_PageFeature_BoxesMutation>>>;
+};
+
+export type About_PageCore_TeamMutation = {
+  name?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  initials?: InputMaybe<Scalars['String']['input']>;
+  country?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  bio?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type About_PagePartnershipsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  icon?: InputMaybe<Scalars['String']['input']>;
+  desc?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type About_PageCommunity_GroupsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  icon?: InputMaybe<Scalars['String']['input']>;
+  desc?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type About_PageMutation = {
+  vision?: InputMaybe<Scalars['String']['input']>;
+  mission?: InputMaybe<Scalars['String']['input']>;
   values?: InputMaybe<Scalars['String']['input']>;
   what_we_do?: InputMaybe<Scalars['String']['input']>;
   company_profile?: InputMaybe<Scalars['String']['input']>;
   our_impact?: InputMaybe<Scalars['String']['input']>;
   why_choose_vvi?: InputMaybe<Scalars['String']['input']>;
-  feature_boxes?: InputMaybe<Array<InputMaybe<PagesFeature_BoxesMutation>>>;
   founder_name?: InputMaybe<Scalars['String']['input']>;
   founder_title?: InputMaybe<Scalars['String']['input']>;
   founder_image?: InputMaybe<Scalars['String']['input']>;
@@ -685,14 +794,22 @@ export type PagesMutation = {
   moses_title?: InputMaybe<Scalars['String']['input']>;
   moses_image?: InputMaybe<Scalars['String']['input']>;
   moses_bio?: InputMaybe<Scalars['String']['input']>;
-  core_team?: InputMaybe<Array<InputMaybe<PagesCore_TeamMutation>>>;
-  partnerships?: InputMaybe<Array<InputMaybe<PagesPartnershipsMutation>>>;
-  community_groups?: InputMaybe<Array<InputMaybe<PagesCommunity_GroupsMutation>>>;
+  core_team?: InputMaybe<Array<InputMaybe<About_PageCore_TeamMutation>>>;
+  partnerships?: InputMaybe<Array<InputMaybe<About_PagePartnershipsMutation>>>;
+  community_groups?: InputMaybe<Array<InputMaybe<About_PageCommunity_GroupsMutation>>>;
+};
+
+export type Programs_PageProgramsMutation = {
+  id?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  icon?: InputMaybe<Scalars['String']['input']>;
+  short?: InputMaybe<Scalars['String']['input']>;
+  details?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type Programs_PageMutation = {
   programs_hero_title?: InputMaybe<Scalars['String']['input']>;
-  programs?: InputMaybe<Array<InputMaybe<PagesProgramsMutation>>>;
-  courses_hero_title?: InputMaybe<Scalars['String']['input']>;
-  beneficiaries_title?: InputMaybe<Scalars['String']['input']>;
-  beneficiaries_text?: InputMaybe<Scalars['String']['input']>;
+  programs?: InputMaybe<Array<InputMaybe<Programs_PageProgramsMutation>>>;
 };
 
 export type SettingsMutation = {
@@ -718,7 +835,11 @@ export type BlogsMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
-export type PagesPartsFragment = { __typename: 'Pages', slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, values?: string | null, what_we_do?: string | null, company_profile?: string | null, our_impact?: string | null, why_choose_vvi?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null, image?: string | null, bio?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, community_groups?: Array<{ __typename: 'PagesCommunity_groups', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, programs?: Array<{ __typename: 'PagesPrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null };
+export type Home_PagePartsFragment = { __typename: 'Home_page', slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, feature_boxes?: Array<{ __typename: 'Home_pageFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null };
+
+export type About_PagePartsFragment = { __typename: 'About_page', vision?: string | null, mission?: string | null, values?: string | null, what_we_do?: string | null, company_profile?: string | null, our_impact?: string | null, why_choose_vvi?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, core_team?: Array<{ __typename: 'About_pageCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null, image?: string | null, bio?: string | null } | null> | null, partnerships?: Array<{ __typename: 'About_pagePartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, community_groups?: Array<{ __typename: 'About_pageCommunity_groups', title?: string | null, icon?: string | null, desc?: string | null } | null> | null };
+
+export type Programs_PagePartsFragment = { __typename: 'Programs_page', programs_hero_title?: string | null, programs?: Array<{ __typename: 'Programs_pagePrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null };
 
 export type SettingsPartsFragment = { __typename: 'Settings', primary_color?: string | null, email?: string | null, phone?: string | null, address?: string | null };
 
@@ -726,24 +847,62 @@ export type CoursesPartsFragment = { __typename: 'Courses', title: string, categ
 
 export type BlogsPartsFragment = { __typename: 'Blogs', title: string, date?: string | null, author?: string | null, image?: string | null, description?: string | null, body?: any | null };
 
-export type PagesQueryVariables = Exact<{
+export type Home_PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type PagesQuery = { __typename?: 'Query', pages: { __typename: 'Pages', id: string, slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, values?: string | null, what_we_do?: string | null, company_profile?: string | null, our_impact?: string | null, why_choose_vvi?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null, image?: string | null, bio?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, community_groups?: Array<{ __typename: 'PagesCommunity_groups', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, programs?: Array<{ __typename: 'PagesPrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null } };
+export type Home_PageQuery = { __typename?: 'Query', home_page: { __typename: 'Home_page', id: string, slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, feature_boxes?: Array<{ __typename: 'Home_pageFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null } };
 
-export type PagesConnectionQueryVariables = Exact<{
+export type Home_PageConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<PagesFilter>;
+  filter?: InputMaybe<Home_PageFilter>;
 }>;
 
 
-export type PagesConnectionQuery = { __typename?: 'Query', pagesConnection: { __typename?: 'PagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PagesConnectionEdges', cursor: string, node?: { __typename: 'Pages', id: string, slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, values?: string | null, what_we_do?: string | null, company_profile?: string | null, our_impact?: string | null, why_choose_vvi?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, programs_hero_title?: string | null, courses_hero_title?: string | null, beneficiaries_title?: string | null, beneficiaries_text?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, feature_boxes?: Array<{ __typename: 'PagesFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, core_team?: Array<{ __typename: 'PagesCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null, image?: string | null, bio?: string | null } | null> | null, partnerships?: Array<{ __typename: 'PagesPartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, community_groups?: Array<{ __typename: 'PagesCommunity_groups', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, programs?: Array<{ __typename: 'PagesPrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null } | null } | null> | null } };
+export type Home_PageConnectionQuery = { __typename?: 'Query', home_pageConnection: { __typename?: 'Home_pageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Home_pageConnectionEdges', cursor: string, node?: { __typename: 'Home_page', id: string, slide1_image?: string | null, slide1_title?: string | null, slide1_subtitle?: string | null, slide1_text?: string | null, slide2_image?: string | null, slide2_title?: string | null, slide2_subtitle?: string | null, slide2_text?: string | null, welcome_title?: string | null, vision?: string | null, mission?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, feature_boxes?: Array<{ __typename: 'Home_pageFeature_boxes', title?: string | null, icon?: string | null, desc?: string | null } | null> | null } | null } | null> | null } };
+
+export type About_PageQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type About_PageQuery = { __typename?: 'Query', about_page: { __typename: 'About_page', id: string, vision?: string | null, mission?: string | null, values?: string | null, what_we_do?: string | null, company_profile?: string | null, our_impact?: string | null, why_choose_vvi?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, core_team?: Array<{ __typename: 'About_pageCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null, image?: string | null, bio?: string | null } | null> | null, partnerships?: Array<{ __typename: 'About_pagePartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, community_groups?: Array<{ __typename: 'About_pageCommunity_groups', title?: string | null, icon?: string | null, desc?: string | null } | null> | null } };
+
+export type About_PageConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<About_PageFilter>;
+}>;
+
+
+export type About_PageConnectionQuery = { __typename?: 'Query', about_pageConnection: { __typename?: 'About_pageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'About_pageConnectionEdges', cursor: string, node?: { __typename: 'About_page', id: string, vision?: string | null, mission?: string | null, values?: string | null, what_we_do?: string | null, company_profile?: string | null, our_impact?: string | null, why_choose_vvi?: string | null, founder_name?: string | null, founder_title?: string | null, founder_image?: string | null, founder_bio?: string | null, founder_quote?: string | null, moses_name?: string | null, moses_title?: string | null, moses_image?: string | null, moses_bio?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, core_team?: Array<{ __typename: 'About_pageCore_team', name?: string | null, title?: string | null, initials?: string | null, country?: string | null, image?: string | null, bio?: string | null } | null> | null, partnerships?: Array<{ __typename: 'About_pagePartnerships', title?: string | null, icon?: string | null, desc?: string | null } | null> | null, community_groups?: Array<{ __typename: 'About_pageCommunity_groups', title?: string | null, icon?: string | null, desc?: string | null } | null> | null } | null } | null> | null } };
+
+export type Programs_PageQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type Programs_PageQuery = { __typename?: 'Query', programs_page: { __typename: 'Programs_page', id: string, programs_hero_title?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, programs?: Array<{ __typename: 'Programs_pagePrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null } };
+
+export type Programs_PageConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<Programs_PageFilter>;
+}>;
+
+
+export type Programs_PageConnectionQuery = { __typename?: 'Query', programs_pageConnection: { __typename?: 'Programs_pageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Programs_pageConnectionEdges', cursor: string, node?: { __typename: 'Programs_page', id: string, programs_hero_title?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, programs?: Array<{ __typename: 'Programs_pagePrograms', id?: string | null, title?: string | null, icon?: string | null, short?: string | null, details?: string | null } | null> | null } | null } | null> | null } };
 
 export type SettingsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -802,8 +961,8 @@ export type BlogsConnectionQueryVariables = Exact<{
 
 export type BlogsConnectionQuery = { __typename?: 'Query', blogsConnection: { __typename?: 'BlogsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'BlogsConnectionEdges', cursor: string, node?: { __typename: 'Blogs', id: string, title: string, date?: string | null, author?: string | null, image?: string | null, description?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
-export const PagesPartsFragmentDoc = gql`
-    fragment PagesParts on Pages {
+export const Home_PagePartsFragmentDoc = gql`
+    fragment Home_pageParts on Home_page {
   __typename
   slide1_image
   slide1_title
@@ -816,17 +975,24 @@ export const PagesPartsFragmentDoc = gql`
   welcome_title
   vision
   mission
-  values
-  what_we_do
-  company_profile
-  our_impact
-  why_choose_vvi
   feature_boxes {
     __typename
     title
     icon
     desc
   }
+}
+    `;
+export const About_PagePartsFragmentDoc = gql`
+    fragment About_pageParts on About_page {
+  __typename
+  vision
+  mission
+  values
+  what_we_do
+  company_profile
+  our_impact
+  why_choose_vvi
   founder_name
   founder_title
   founder_image
@@ -857,6 +1023,11 @@ export const PagesPartsFragmentDoc = gql`
     icon
     desc
   }
+}
+    `;
+export const Programs_PagePartsFragmentDoc = gql`
+    fragment Programs_pageParts on Programs_page {
+  __typename
   programs_hero_title
   programs {
     __typename
@@ -866,9 +1037,6 @@ export const PagesPartsFragmentDoc = gql`
     short
     details
   }
-  courses_hero_title
-  beneficiaries_title
-  beneficiaries_text
 }
     `;
 export const SettingsPartsFragmentDoc = gql`
@@ -900,9 +1068,9 @@ export const BlogsPartsFragmentDoc = gql`
   body
 }
     `;
-export const PagesDocument = gql`
-    query pages($relativePath: String!) {
-  pages(relativePath: $relativePath) {
+export const Home_PageDocument = gql`
+    query home_page($relativePath: String!) {
+  home_page(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -915,13 +1083,13 @@ export const PagesDocument = gql`
       }
       id
     }
-    ...PagesParts
+    ...Home_pageParts
   }
 }
-    ${PagesPartsFragmentDoc}`;
-export const PagesConnectionDocument = gql`
-    query pagesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PagesFilter) {
-  pagesConnection(
+    ${Home_PagePartsFragmentDoc}`;
+export const Home_PageConnectionDocument = gql`
+    query home_pageConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Home_pageFilter) {
+  home_pageConnection(
     before: $before
     after: $after
     first: $first
@@ -951,12 +1119,126 @@ export const PagesConnectionDocument = gql`
           }
           id
         }
-        ...PagesParts
+        ...Home_pageParts
       }
     }
   }
 }
-    ${PagesPartsFragmentDoc}`;
+    ${Home_PagePartsFragmentDoc}`;
+export const About_PageDocument = gql`
+    query about_page($relativePath: String!) {
+  about_page(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...About_pageParts
+  }
+}
+    ${About_PagePartsFragmentDoc}`;
+export const About_PageConnectionDocument = gql`
+    query about_pageConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: About_pageFilter) {
+  about_pageConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...About_pageParts
+      }
+    }
+  }
+}
+    ${About_PagePartsFragmentDoc}`;
+export const Programs_PageDocument = gql`
+    query programs_page($relativePath: String!) {
+  programs_page(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Programs_pageParts
+  }
+}
+    ${Programs_PagePartsFragmentDoc}`;
+export const Programs_PageConnectionDocument = gql`
+    query programs_pageConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Programs_pageFilter) {
+  programs_pageConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Programs_pageParts
+      }
+    }
+  }
+}
+    ${Programs_PagePartsFragmentDoc}`;
 export const SettingsDocument = gql`
     query settings($relativePath: String!) {
   settings(relativePath: $relativePath) {
@@ -1131,11 +1413,23 @@ export const BlogsConnectionDocument = gql`
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
-      pages(variables: PagesQueryVariables, options?: C): Promise<{data: PagesQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PagesQueryVariables, query: string}> {
-        return requester<{data: PagesQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PagesQueryVariables, query: string}, PagesQueryVariables>(PagesDocument, variables, options);
+      home_page(variables: Home_PageQueryVariables, options?: C): Promise<{data: Home_PageQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Home_PageQueryVariables, query: string}> {
+        return requester<{data: Home_PageQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Home_PageQueryVariables, query: string}, Home_PageQueryVariables>(Home_PageDocument, variables, options);
       },
-    pagesConnection(variables?: PagesConnectionQueryVariables, options?: C): Promise<{data: PagesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PagesConnectionQueryVariables, query: string}> {
-        return requester<{data: PagesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PagesConnectionQueryVariables, query: string}, PagesConnectionQueryVariables>(PagesConnectionDocument, variables, options);
+    home_pageConnection(variables?: Home_PageConnectionQueryVariables, options?: C): Promise<{data: Home_PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Home_PageConnectionQueryVariables, query: string}> {
+        return requester<{data: Home_PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Home_PageConnectionQueryVariables, query: string}, Home_PageConnectionQueryVariables>(Home_PageConnectionDocument, variables, options);
+      },
+    about_page(variables: About_PageQueryVariables, options?: C): Promise<{data: About_PageQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: About_PageQueryVariables, query: string}> {
+        return requester<{data: About_PageQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: About_PageQueryVariables, query: string}, About_PageQueryVariables>(About_PageDocument, variables, options);
+      },
+    about_pageConnection(variables?: About_PageConnectionQueryVariables, options?: C): Promise<{data: About_PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: About_PageConnectionQueryVariables, query: string}> {
+        return requester<{data: About_PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: About_PageConnectionQueryVariables, query: string}, About_PageConnectionQueryVariables>(About_PageConnectionDocument, variables, options);
+      },
+    programs_page(variables: Programs_PageQueryVariables, options?: C): Promise<{data: Programs_PageQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Programs_PageQueryVariables, query: string}> {
+        return requester<{data: Programs_PageQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Programs_PageQueryVariables, query: string}, Programs_PageQueryVariables>(Programs_PageDocument, variables, options);
+      },
+    programs_pageConnection(variables?: Programs_PageConnectionQueryVariables, options?: C): Promise<{data: Programs_PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Programs_PageConnectionQueryVariables, query: string}> {
+        return requester<{data: Programs_PageConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Programs_PageConnectionQueryVariables, query: string}, Programs_PageConnectionQueryVariables>(Programs_PageConnectionDocument, variables, options);
       },
     settings(variables: SettingsQueryVariables, options?: C): Promise<{data: SettingsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SettingsQueryVariables, query: string}> {
         return requester<{data: SettingsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SettingsQueryVariables, query: string}, SettingsQueryVariables>(SettingsDocument, variables, options);

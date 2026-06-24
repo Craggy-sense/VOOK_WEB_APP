@@ -10,7 +10,7 @@ export default function CoreTeamPage(props: any) {
     data: props.data,
   });
 
-  const page = data.pages;
+  const page = data.about_page;
   const [selectedMember, setSelectedMember] = useState<any>(null);
 
   const openModal = (member: any) => {

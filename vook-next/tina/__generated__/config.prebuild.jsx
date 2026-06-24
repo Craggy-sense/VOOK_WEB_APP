@@ -18,9 +18,18 @@ var config_default = defineConfig({
   schema: {
     collections: [
       {
-        name: "pages",
-        label: "Pages",
+        name: "home_page",
+        label: "Home Page",
         path: "src/content/pages",
+        match: {
+          include: "home"
+        },
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false
+          }
+        },
         format: "md",
         fields: [
           { type: "image", name: "slide1_image", label: "Slide 1 Image" },
@@ -34,11 +43,6 @@ var config_default = defineConfig({
           { type: "string", name: "welcome_title", label: "Home Welcome Title" },
           { type: "string", name: "vision", label: "Vision Statement" },
           { type: "string", name: "mission", label: "Mission Statement" },
-          { type: "string", name: "values", label: "Our Values", ui: { component: "textarea" } },
-          { type: "string", name: "what_we_do", label: "What We Do", ui: { component: "textarea" } },
-          { type: "string", name: "company_profile", label: "Company Profile", ui: { component: "textarea" } },
-          { type: "string", name: "our_impact", label: "Our Impact", ui: { component: "textarea" } },
-          { type: "string", name: "why_choose_vvi", label: "Why Choose VVI?", ui: { component: "textarea" } },
           {
             type: "object",
             list: true,
@@ -52,7 +56,31 @@ var config_default = defineConfig({
               { type: "string", name: "icon", label: "Icon (FontAwesome class)" },
               { type: "string", name: "desc", label: "Description" }
             ]
-          },
+          }
+        ]
+      },
+      {
+        name: "about_page",
+        label: "About Page",
+        path: "src/content/pages",
+        match: {
+          include: "about"
+        },
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false
+          }
+        },
+        format: "md",
+        fields: [
+          { type: "string", name: "vision", label: "Vision Statement" },
+          { type: "string", name: "mission", label: "Mission Statement" },
+          { type: "string", name: "values", label: "Our Values", ui: { component: "textarea" } },
+          { type: "string", name: "what_we_do", label: "What We Do", ui: { component: "textarea" } },
+          { type: "string", name: "company_profile", label: "Company Profile", ui: { component: "textarea" } },
+          { type: "string", name: "our_impact", label: "Our Impact", ui: { component: "textarea" } },
+          { type: "string", name: "why_choose_vvi", label: "Why Choose VVI?", ui: { component: "textarea" } },
           { type: "string", name: "founder_name", label: "Founder Name" },
           { type: "string", name: "founder_title", label: "Founder Title" },
           { type: "image", name: "founder_image", label: "Founder Image" },
@@ -106,7 +134,24 @@ var config_default = defineConfig({
               { type: "string", name: "icon", label: "Icon (FontAwesome class)" },
               { type: "string", name: "desc", label: "Description", ui: { component: "textarea" } }
             ]
-          },
+          }
+        ]
+      },
+      {
+        name: "programs_page",
+        label: "Programs Page",
+        path: "src/content/pages",
+        match: {
+          include: "programs"
+        },
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false
+          }
+        },
+        format: "md",
+        fields: [
           { type: "string", name: "programs_hero_title", label: "Programs Hero Title" },
           {
             type: "object",
@@ -123,10 +168,7 @@ var config_default = defineConfig({
               { type: "string", name: "short", label: "Tagline" },
               { type: "string", name: "details", label: "Full Details", ui: { component: "textarea" } }
             ]
-          },
-          { type: "string", name: "courses_hero_title", label: "Courses Hero Title" },
-          { type: "string", name: "beneficiaries_title", label: "Beneficiaries Title" },
-          { type: "string", name: "beneficiaries_text", label: "Beneficiaries Text" }
+          }
         ]
       },
       {

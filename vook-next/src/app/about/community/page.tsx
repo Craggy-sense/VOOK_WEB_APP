@@ -8,6 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Community() {
-  const result = await client.queries.pages({ relativePath: "about.md" });
+  const result = await client.queries.about_page({ relativePath: "about.md" });
   return <CommunityPage {...result} />;
 }

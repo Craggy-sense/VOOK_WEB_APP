@@ -11,7 +11,7 @@ export default function ProgramsPage(props: any) {
     data: props.data,
   });
 
-  const page = data.pages;
+  const page = data.programs_page;
   const programs = page.programs || [];
 
   const closeModal = () => {

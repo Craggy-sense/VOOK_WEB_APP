@@ -10,7 +10,7 @@ export default function CommunityPage(props: any) {
     data: props.data,
   });
 
-  const page = data.pages;
+  const page = data.about_page;
 
   return (
     <>
