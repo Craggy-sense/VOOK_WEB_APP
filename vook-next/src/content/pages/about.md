@@ -72,7 +72,7 @@ core_team:
 
       She possesses over twenty years of experience in project management and community health having worked with various nonprofit organizations (NGOs) including Amref, PATH, Save the Children and Jhpiego. Dr. Mutua believes in the potential of every human being and helps them define their God-given purpose (success), clarify their personal goals and overcome obstacles that stand between them and their destiny.
   - name: Jini Kingsley
-    title: Entrepreneurship & leadership
+    title: Entrepreneurship & Leadership
     initials: JK
     country: Cameroon
     image: /uploads/kingsley.jpg
