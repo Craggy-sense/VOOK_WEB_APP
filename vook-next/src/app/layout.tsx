@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Vook Voice International",
     images: [
       {
-        url: "/Vook logo.png",
+        url: "/Vook logo new.jpg",
         width: 1200,
         height: 630,
         alt: "Vook Voice International",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vook Voice International",
     description: "Generating, Packaging, and Sharing Knowledge for Transformation",
-    images: ["/Vook logo.png"],
+    images: ["/Vook logo new.jpg"],
   },
 };
 
